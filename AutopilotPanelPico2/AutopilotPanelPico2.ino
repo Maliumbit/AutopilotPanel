@@ -89,13 +89,47 @@ void ButtonLED() {
 
   if (ButtonCurrentState[0] == LOW && ButtonLastState[0] == HIGH) {
     LEDState[0] = !LEDState[0];
-    
+      for (int i = 7; i >= 0; i--) {
+        int bitValue = (LEDs[0] >> i) & 1 //makes a bitvalue variable, that only stores the las bit due to & 1
+
+        digitalWrite(DataPinLED, bitValue);
+
+        digitalWrite(CLKPin, HIGH);
+        digitlaWrite(CLKPin, LOW);
+      }
   }
 }
 
 void setup() {
-  // put your setup code here, to run once:
+  Serial.begin(115200);
 
+  for (int i = 0; i < NUM_Buttons; i++) {
+    pinMode(ButtonPins[i], INPUT_PULLUP);
+    ButtonLastState[i] = HIGH;
+    LEDState[i] = false;
+  }
+
+  for (int i = 0; i < NUM_Digits; i++) {
+    pinMode(LatchPins[i], OUTPUT);
+    digitalWrite(LatchPins[i], HIGH);
+  }
+
+  pinMode(DataPinLED, OUTPUT);
+  pinMode(DataPin7S, OUTPUT);
+  pinMode(CLKPin, OUTPUT);
+ 
+  pinMode(EncoderPinA, INPUT_PULLUP);
+  pinMode(EncoderPinB, INPUT_PULLUP);
+  pinMode(EncoderButton, INPUT_PULLUP);
+
+  EncoderLastState = HIGH;
+ 
+  LastPinA = digitalRead(EncoderPinA);
+
+  digitalWrite(CLKPin, LOW);
+ 
+  pinMode(LED_BUILTIN, OUTPUT);
+  digitalWrite(LED_BUILTIN, HIGH);
 }
 
 void loop() {

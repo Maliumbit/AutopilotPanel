@@ -34,6 +34,10 @@ int DisplayMax = 99900;
 int EncoderSteps = 2;
 int EncoderStepsSmall = 100;
 int EncoderStepsBig = 1000;
+
+unsigned long CurrentTime;
+unsigned long PreviousTime;
+int Interval = 1;
  
 bool ButtonCurrentState[NUMButtons];
 bool ButtonLastState[NUMButtons];
@@ -85,39 +89,22 @@ byte LEDs[] = {
 };
 
 void ButtonLED() {
-  for (int i = 0; i < NUMButtons; i++) {
-    ButtonCurrentState[i] = digitalRead(ButtonPins[i]);
-
-    if (ButtonCurrentState[i] == LOW && ButtonLastState[i] == HIGH) {
-
-      if (i == 0 || i == 1 || i == 2 || i == 3) {
-        LEDState1 = LEDState1 & LEDs[15];
-        LEDState1 = LEDState1 | LEDs[i]; //Makes sure only 1 of the first 4 leds is on
-
-        for (int n = 7; n >= 0; n--) {
-          int bitValue = (LEDState2 >> n) & 1; //makes a bitvalue variable, that only stores the las bit due to & 1
-
-          digitalWrite(DataPinLED, bitValue);
-
-          digitalWrite(CLKPin, HIGH);
-          digitalWrite(CLKPin, LOW);
-        }
-
-        for (int n = 7; n >= 0; n--) {
-          int bitValue = (LEDState1 >> n) & 1; //makes a bitvalue variable, that only stores the las bit due to & 1
-
-          digitalWrite(DataPinLED, bitValue);
-
-          digitalWrite(CLKPin, HIGH);
-          digitalWrite(CLKPin, LOW);
-        }
-      }
+  CurrentTime = millis();
+  if (CurrentTime - PreviousTime < Interval) {
+    return;
+  }
+  else {
+    PreviousTime = CurrentTime;
     
-      LEDState[i] = !LEDState[i];
+    for (int i = 0; i < NUMButtons; i++) {
+      ButtonCurrentState[i] = digitalRead(ButtonPins[i]);
 
-      if (LEDState[i] == false) {
-        if (i < 8) {
-          LEDState1 = LEDState1 | LEDs[i];
+      if (ButtonCurrentState[i] == LOW && ButtonLastState[i] == HIGH) {
+
+        if (i == 0 || i == 1 || i == 2 || i == 3) {
+          LEDState1 = LEDState1 & LEDs[15];
+          LEDState1 = LEDState1 | LEDs[i]; //Makes sure only 1 of the first 4 leds is on
+
           for (int n = 7; n >= 0; n--) {
             int bitValue = (LEDState2 >> n) & 1; //makes a bitvalue variable, that only stores the las bit due to & 1
 
@@ -125,82 +112,107 @@ void ButtonLED() {
 
             digitalWrite(CLKPin, HIGH);
             digitalWrite(CLKPin, LOW);
-        }
+          }
 
-        for (int n = 7; n >= 0; n--) {
-          int bitValue = (LEDState1 >> n) & 1; //makes a bitvalue variable, that only stores the las bit due to & 1
-
-          digitalWrite(DataPinLED, bitValue);
-
-          digitalWrite(CLKPin, HIGH);
-          digitalWrite(CLKPin, LOW);
-        }
-        }
-        else {
-          LEDState2 = LEDState2 | LEDs[i];
           for (int n = 7; n >= 0; n--) {
-            int bitValue = (LEDState2 >> n) & 1; //makes a bitvalue variable, that only stores the las bit due to & 1
+            int bitValue = (LEDState1 >> n) & 1; //makes a bitvalue variable, that only stores the las bit due to & 1
 
             digitalWrite(DataPinLED, bitValue);
 
             digitalWrite(CLKPin, HIGH);
             digitalWrite(CLKPin, LOW);
+          }
         }
+      
+        LEDState[i] = !LEDState[i];
 
-        for (int n = 7; n >= 0; n--) {
-          int bitValue = (LEDState1 >> n) & 1; //makes a bitvalue variable, that only stores the las bit due to & 1
+        if (LEDState[i] == false) {
+          if (i < 8 && i > 3) {
+            LEDState1 = LEDState1 | LEDs[i];
+            for (int n = 7; n >= 0; n--) {
+              int bitValue = (LEDState2 >> n) & 1; //makes a bitvalue variable, that only stores the las bit due to & 1
 
-          digitalWrite(DataPinLED, bitValue);
+              digitalWrite(DataPinLED, bitValue);
 
-          digitalWrite(CLKPin, HIGH);
-          digitalWrite(CLKPin, LOW);
+              digitalWrite(CLKPin, HIGH);
+              digitalWrite(CLKPin, LOW);
+          }
+
+          for (int n = 7; n >= 0; n--) {
+            int bitValue = (LEDState1 >> n) & 1; //makes a bitvalue variable, that only stores the las bit due to & 1
+
+            digitalWrite(DataPinLED, bitValue);
+
+            digitalWrite(CLKPin, HIGH);
+            digitalWrite(CLKPin, LOW);
+          }
+          }
+          else if (i > 7) {
+            LEDState2 = LEDState2 | LEDs[i];
+            for (int n = 7; n >= 0; n--) {
+              int bitValue = (LEDState2 >> n) & 1; //makes a bitvalue variable, that only stores the las bit due to & 1
+
+              digitalWrite(DataPinLED, bitValue);
+
+              digitalWrite(CLKPin, HIGH);
+              digitalWrite(CLKPin, LOW);
+          }
+
+            for (int n = 7; n >= 0; n--) {
+              int bitValue = (LEDState1 >> n) & 1; //makes a bitvalue variable, that only stores the las bit due to & 1
+
+              digitalWrite(DataPinLED, bitValue);
+
+              digitalWrite(CLKPin, HIGH);
+              digitalWrite(CLKPin, LOW);
+            }
+          }
         }
+        else if (LEDState[i] == true) {
+          if (i < 8 && i > 3) {
+            LEDState1 = LEDState1 & ~LEDs[i];
+            for (int n = 7; n >= 0; n--) {
+              int bitValue = (LEDState2 >> n) & 1; //makes a bitvalue variable, that only stores the las bit due to & 1
+
+              digitalWrite(DataPinLED, bitValue);
+
+              digitalWrite(CLKPin, HIGH);
+              digitalWrite(CLKPin, LOW);
+          }
+
+            for (int n = 7; n >= 0; n--) {
+              int bitValue = (LEDState1 >> n) & 1; //makes a bitvalue variable, that only stores the las bit due to & 1
+
+              digitalWrite(DataPinLED, bitValue);
+
+              digitalWrite(CLKPin, HIGH);
+              digitalWrite(CLKPin, LOW);
+            }
+          }
+          else if (i > 7) {
+            LEDState2 = LEDState2 & ~LEDs[i];
+            for (int n = 7; n >= 0; n--) {
+              int bitValue = (LEDState2 >> n) & 1; //makes a bitvalue variable, that only stores the las bit due to & 1
+
+              digitalWrite(DataPinLED, bitValue);
+
+              digitalWrite(CLKPin, HIGH);
+              digitalWrite(CLKPin, LOW);
+          }
+
+            for (int n = 7; n >= 0; n--) {
+              int bitValue = (LEDState1 >> n) & 1; //makes a bitvalue variable, that only stores the las bit due to & 1
+
+              digitalWrite(DataPinLED, bitValue);
+
+              digitalWrite(CLKPin, HIGH);
+              digitalWrite(CLKPin, LOW);
+            }
+          }
         }
       }
-      else if (LEDState[i] == true) {
-        if (i < 8) {
-          LEDState1 = LEDState1 & ~LEDs[i];
-          for (int n = 7; n >= 0; n--) {
-            int bitValue = (LEDState2 >> n) & 1; //makes a bitvalue variable, that only stores the las bit due to & 1
-
-            digitalWrite(DataPinLED, bitValue);
-
-            digitalWrite(CLKPin, HIGH);
-            digitalWrite(CLKPin, LOW);
-        }
-
-        for (int n = 7; n >= 0; n--) {
-          int bitValue = (LEDState1 >> n) & 1; //makes a bitvalue variable, that only stores the las bit due to & 1
-
-          digitalWrite(DataPinLED, bitValue);
-
-          digitalWrite(CLKPin, HIGH);
-          digitalWrite(CLKPin, LOW);
-        }
-        }
-        else {
-          LEDState2 = LEDState2 & ~LEDs[i];
-          for (int n = 7; n >= 0; n--) {
-            int bitValue = (LEDState2 >> n) & 1; //makes a bitvalue variable, that only stores the las bit due to & 1
-
-            digitalWrite(DataPinLED, bitValue);
-
-            digitalWrite(CLKPin, HIGH);
-            digitalWrite(CLKPin, LOW);
-        }
-
-        for (int n = 7; n >= 0; n--) {
-          int bitValue = (LEDState1 >> n) & 1; //makes a bitvalue variable, that only stores the las bit due to & 1
-
-          digitalWrite(DataPinLED, bitValue);
-
-          digitalWrite(CLKPin, HIGH);
-          digitalWrite(CLKPin, LOW);
-        }
-        }
-      }
+      ButtonLastState[i] = ButtonCurrentState[i];
     }
-    ButtonLastState[i] = ButtonCurrentState[i];
   }
 }
 
@@ -211,6 +223,10 @@ void setup() {
     pinMode(ButtonPins[i], INPUT_PULLUP);
     ButtonLastState[i] = HIGH;
     LEDState[i] = false;
+  }
+
+  for (int i = 0; i < NUMButtons; i++) {
+    LEDState[i] = true;
   }
 
   for (int i = 0; i < NUMDigits; i++) {
@@ -225,6 +241,8 @@ void setup() {
   pinMode(EncoderPinA, INPUT_PULLUP);
   pinMode(EncoderPinB, INPUT_PULLUP);
   pinMode(EncoderButton, INPUT_PULLUP);
+
+  PreviousTime = millis();
 
   EncoderLastState = HIGH;
  

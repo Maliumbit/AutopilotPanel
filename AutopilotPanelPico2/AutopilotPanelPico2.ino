@@ -85,19 +85,32 @@ byte LEDs[] = {
 };
 
 void ButtonLED() {
-  ButtonCurrenState[0] = digitalRead(ButtonPins[0]);
+  ButtonCurrentState[0] = digitalRead(ButtonPins[0]);
 
   if (ButtonCurrentState[0] == LOW && ButtonLastState[0] == HIGH) {
+    Serial.println("Button Pressed");
+
     LEDState[0] = !LEDState[0];
+      
       for (int i = 7; i >= 0; i--) {
-        int bitValue = (LEDs[0] >> i) & 1 //makes a bitvalue variable, that only stores the las bit due to & 1
+        int bitValue = (LEDs[14] >> i) & 1; //makes a bitvalue variable, that only stores the las bit due to & 1
 
         digitalWrite(DataPinLED, bitValue);
 
         digitalWrite(CLKPin, HIGH);
-        digitlaWrite(CLKPin, LOW);
+        digitalWrite(CLKPin, LOW);
+      }
+      
+      for (int i = 7; i >= 0; i--) {
+        int bitValue = (LEDs[0] >> i) & 1; //makes a bitvalue variable, that only stores the las bit due to & 1
+
+        digitalWrite(DataPinLED, bitValue);
+
+        digitalWrite(CLKPin, HIGH);
+        digitalWrite(CLKPin, LOW);
       }
   }
+  ButtonLastState[0] = ButtonCurrentState[0];
 }
 
 void setup() {
@@ -111,7 +124,7 @@ void setup() {
 
   for (int i = 0; i < NUM_Digits; i++) {
     pinMode(LatchPins[i], OUTPUT);
-    digitalWrite(LatchPins[i], HIGH);
+    digitalWrite(LatchPins[i], LOW);
   }
 
   pinMode(DataPinLED, OUTPUT);
@@ -133,6 +146,5 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-
+  ButtonLED();
 }

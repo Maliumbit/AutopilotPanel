@@ -4,8 +4,8 @@
 //Max and Min values for the 7 segment display depending on mode (Done)
 //instead of the delay after the debounce, maybe try to solve with millis
 
-#define NUM_Buttons 14 //Number of buttons for array
-#define NUM_Digits 6
+#define NUMButtons 14 //Number of buttons for array
+#define NUMDigits 6
 
 #define EncoderPinA 2
 #define EncoderPinB 1
@@ -15,9 +15,9 @@ int CLKPin = 28;
 int DataPin7S = 27;
 int DataPinLED = 17;
  
-int ButtonPins[NUM_Buttons] = {3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16}; //Pins, which have Buttons
+int ButtonPins[NUMButtons] = {3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16}; //Pins, which have Buttons
 
-int LatchPins[NUM_Digits] = {26, 22, 21, 20, 19, 18}; //Latch Pins starting with ones, then tens, then hundreds...
+int LatchPins[NUMDigits] = {26, 22, 21, 20, 19, 18}; //Latch Pins starting with ones, then tens, then hundreds...
 
 int CurrentPinA;
 int LastPinA;
@@ -35,10 +35,10 @@ int EncoderSteps = 2;
 int EncoderStepsSmall = 100;
 int EncoderStepsBig = 1000;
  
-bool ButtonCurrentState[NUM_Buttons];
-bool ButtonLastState[NUM_Buttons];
+bool ButtonCurrentState[NUMButtons];
+bool ButtonLastState[NUMButtons];
  
-bool LEDState[NUM_Buttons];
+bool LEDState[NUMButtons];
 
 byte LEDState1 = 0b00000000; //Maybe put 0b00000100 here to activate Altitude LED from the start
 byte LEDState2 = 0b00000000;
@@ -85,44 +85,135 @@ byte LEDs[] = {
 };
 
 void ButtonLED() {
-  ButtonCurrentState[0] = digitalRead(ButtonPins[0]);
+  for (int i = 0; i < NUMButtons; i++) {
+    ButtonCurrentState[i] = digitalRead(ButtonPins[i]);
 
-  if (ButtonCurrentState[0] == LOW && ButtonLastState[0] == HIGH) {
-    Serial.println("Button Pressed");
+    if (ButtonCurrentState[i] == LOW && ButtonLastState[i] == HIGH) {
 
-    LEDState[0] = !LEDState[0];
-      
-      for (int i = 7; i >= 0; i--) {
-        int bitValue = (LEDs[14] >> i) & 1; //makes a bitvalue variable, that only stores the las bit due to & 1
+      if (i == 0 || i == 1 || i == 2 || i == 3) {
+        LEDState1 = LEDState1 & LEDs[15];
+        LEDState1 = LEDState1 | LEDs[i]; //Makes sure only 1 of the first 4 leds is on
 
-        digitalWrite(DataPinLED, bitValue);
+        for (int n = 7; n >= 0; n--) {
+          int bitValue = (LEDState2 >> n) & 1; //makes a bitvalue variable, that only stores the las bit due to & 1
 
-        digitalWrite(CLKPin, HIGH);
-        digitalWrite(CLKPin, LOW);
+          digitalWrite(DataPinLED, bitValue);
+
+          digitalWrite(CLKPin, HIGH);
+          digitalWrite(CLKPin, LOW);
+        }
+
+        for (int n = 7; n >= 0; n--) {
+          int bitValue = (LEDState1 >> n) & 1; //makes a bitvalue variable, that only stores the las bit due to & 1
+
+          digitalWrite(DataPinLED, bitValue);
+
+          digitalWrite(CLKPin, HIGH);
+          digitalWrite(CLKPin, LOW);
+        }
       }
-      
-      for (int i = 7; i >= 0; i--) {
-        int bitValue = (LEDs[0] >> i) & 1; //makes a bitvalue variable, that only stores the las bit due to & 1
+    
+      LEDState[i] = !LEDState[i];
 
-        digitalWrite(DataPinLED, bitValue);
+      if (LEDState[i] == false) {
+        if (i < 8) {
+          LEDState1 = LEDState1 | LEDs[i];
+          for (int n = 7; n >= 0; n--) {
+            int bitValue = (LEDState2 >> n) & 1; //makes a bitvalue variable, that only stores the las bit due to & 1
 
-        digitalWrite(CLKPin, HIGH);
-        digitalWrite(CLKPin, LOW);
+            digitalWrite(DataPinLED, bitValue);
+
+            digitalWrite(CLKPin, HIGH);
+            digitalWrite(CLKPin, LOW);
+        }
+
+        for (int n = 7; n >= 0; n--) {
+          int bitValue = (LEDState1 >> n) & 1; //makes a bitvalue variable, that only stores the las bit due to & 1
+
+          digitalWrite(DataPinLED, bitValue);
+
+          digitalWrite(CLKPin, HIGH);
+          digitalWrite(CLKPin, LOW);
+        }
+        }
+        else {
+          LEDState2 = LEDState2 | LEDs[i];
+          for (int n = 7; n >= 0; n--) {
+            int bitValue = (LEDState2 >> n) & 1; //makes a bitvalue variable, that only stores the las bit due to & 1
+
+            digitalWrite(DataPinLED, bitValue);
+
+            digitalWrite(CLKPin, HIGH);
+            digitalWrite(CLKPin, LOW);
+        }
+
+        for (int n = 7; n >= 0; n--) {
+          int bitValue = (LEDState1 >> n) & 1; //makes a bitvalue variable, that only stores the las bit due to & 1
+
+          digitalWrite(DataPinLED, bitValue);
+
+          digitalWrite(CLKPin, HIGH);
+          digitalWrite(CLKPin, LOW);
+        }
+        }
       }
+      else if (LEDState[i] == true) {
+        if (i < 8) {
+          LEDState1 = LEDState1 & ~LEDs[i];
+          for (int n = 7; n >= 0; n--) {
+            int bitValue = (LEDState2 >> n) & 1; //makes a bitvalue variable, that only stores the las bit due to & 1
+
+            digitalWrite(DataPinLED, bitValue);
+
+            digitalWrite(CLKPin, HIGH);
+            digitalWrite(CLKPin, LOW);
+        }
+
+        for (int n = 7; n >= 0; n--) {
+          int bitValue = (LEDState1 >> n) & 1; //makes a bitvalue variable, that only stores the las bit due to & 1
+
+          digitalWrite(DataPinLED, bitValue);
+
+          digitalWrite(CLKPin, HIGH);
+          digitalWrite(CLKPin, LOW);
+        }
+        }
+        else {
+          LEDState2 = LEDState2 & ~LEDs[i];
+          for (int n = 7; n >= 0; n--) {
+            int bitValue = (LEDState2 >> n) & 1; //makes a bitvalue variable, that only stores the las bit due to & 1
+
+            digitalWrite(DataPinLED, bitValue);
+
+            digitalWrite(CLKPin, HIGH);
+            digitalWrite(CLKPin, LOW);
+        }
+
+        for (int n = 7; n >= 0; n--) {
+          int bitValue = (LEDState1 >> n) & 1; //makes a bitvalue variable, that only stores the las bit due to & 1
+
+          digitalWrite(DataPinLED, bitValue);
+
+          digitalWrite(CLKPin, HIGH);
+          digitalWrite(CLKPin, LOW);
+        }
+        }
+      }
+    }
+    ButtonLastState[i] = ButtonCurrentState[i];
   }
-  ButtonLastState[0] = ButtonCurrentState[0];
 }
 
 void setup() {
   Serial.begin(115200);
 
-  for (int i = 0; i < NUM_Buttons; i++) {
+  for (int i = 0; i < NUMButtons; i++) {
     pinMode(ButtonPins[i], INPUT_PULLUP);
     ButtonLastState[i] = HIGH;
     LEDState[i] = false;
   }
 
-  for (int i = 0; i < NUM_Digits; i++) {
+  for (int i = 0; i < NUMDigits; i++) {
     pinMode(LatchPins[i], OUTPUT);
     digitalWrite(LatchPins[i], LOW);
   }
@@ -140,6 +231,24 @@ void setup() {
   LastPinA = digitalRead(EncoderPinA);
 
   digitalWrite(CLKPin, LOW);
+
+  for (int n = 7; n >= 0; n--) {
+    int bitValue = (LEDState2 >> n) & 1; //makes a bitvalue variable, that only stores the las bit due to & 1
+
+    digitalWrite(DataPinLED, bitValue);
+
+    digitalWrite(CLKPin, HIGH);
+    digitalWrite(CLKPin, LOW);
+  }
+
+  for (int n = 7; n >= 0; n--) {
+    int bitValue = (LEDState1 >> n) & 1; //makes a bitvalue variable, that only stores the las bit due to & 1
+
+    digitalWrite(DataPinLED, bitValue);
+
+    digitalWrite(CLKPin, HIGH);
+    digitalWrite(CLKPin, LOW);
+  }
  
   pinMode(LED_BUILTIN, OUTPUT);
   digitalWrite(LED_BUILTIN, HIGH);

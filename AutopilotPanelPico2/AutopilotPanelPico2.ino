@@ -3,6 +3,10 @@
 //Make Debounce of encoder Switch better, similar to debounce of normal switches (Done)
 //Max and Min values for the 7 segment display depending on mode (Done)
 //instead of the delay after the debounce, maybe try to solve with millis
+//add that if over 360 degrees in heading mode it starts back at 0
+//add that it saves the altitude or speed or such you set, so when you get back to that mode it still has that displayed
+//when vs switches from positive to negative it stops at 0 and then continues
+//when encoder button gets pressed it should reset to small steps
 
 #define NUMButtons 14 //Number of buttons for array
 #define NUMDigits 6
@@ -10,6 +14,8 @@
 #define EncoderPinA 2
 #define EncoderPinB 1
 #define EncoderButton 0
+
+#define NumModes 4
  
 int CLKPin = 28;
 int DataPin7S = 27;
@@ -26,6 +32,13 @@ int EncoderPos = 0;
 bool EncoderPress = false;
 bool EncoderCurrentState;
 bool EncoderLastState;
+
+int Data[NumModes] = {0, 1, 2, 3};
+
+int Speed;
+int Heading;
+int Altitude;
+int VerticalSpeed;
 
 int DisplayNumber = 0;
 int DisplaySpecial = 2;
@@ -122,6 +135,8 @@ void ButtonLED() {
             digitalWrite(CLKPin, HIGH);
             digitalWrite(CLKPin, LOW);
           }
+
+          EncoderSteps = i;
         }
       
         LEDState[i] = !LEDState[i];
@@ -216,6 +231,104 @@ void ButtonLED() {
   }
 }
 
+void Encoder() {
+  CurrentPinA = digitalRead(EncoderPinA);
+
+  if (EncoderSteps == 0) { //Speed
+    EncoderStepsSmall = 1;
+    EncoderStepsBig = 10;
+
+    DisplayMin = 0;
+    DisplayMax = 999;
+  }
+  else if (EncoderSteps == 1) { //Heading
+    EncoderStepsSmall = 1;
+    EncoderStepsBig = 10;
+
+    DisplayMin = 1;
+    DisplayMax = 360; //add that if over 360 degrees in heading mode it starts back at 0
+  }
+  else if (EncoderSteps == 2) { //Altitude
+    EncoderStepsSmall = 100;
+    EncoderStepsBig = 1000;
+
+    DisplayMin = 0;
+    DisplayMax = 99900;
+
+//    digitalWrite(LatchPins[5], LOW);
+  }
+  else if (EncoderSteps == 3) { //Vertical Speed
+    EncoderStepsSmall = 100;
+    EncoderStepsBig = 1000;
+
+    DisplayMin = -99900;
+    DisplayMax = 99900;
+  }
+
+
+  if (CurrentPinA != LastPinA) {
+    if (CurrentPinA == digitalRead(EncoderPinB)) {
+      if (EncoderPress == false) {
+        Data[EncoderSteps] = Data[EncoderSteps] - EncoderStepsSmall;
+      }
+      if (EncoderPress == true) {
+        Data[EncoderSteps] = Data[EncoderSteps] - EncoderStepsBig;
+      }
+    }
+    else {
+      if (EncoderPress == false) {
+        Data[EncoderSteps] = Data[EncoderSteps] + EncoderStepsSmall;
+      }
+      if (EncoderPress == true) {
+        Data[EncoderSteps] = Data[EncoderSteps] + EncoderStepsBig;
+      }
+    }
+ 
+/*  if (CurrentPinA != LastPinA) {
+    if (CurrentPinA == digitalRead(EncoderPinB)) {
+      if (EncoderPress == false) {
+        EncoderPos = EncoderPos - EncoderStepsSmall;
+      }
+      if (EncoderPress == true) {
+        EncoderPos = EncoderPos - EncoderStepsBig;
+      }
+    } else {
+      if (EncoderPress == false) {
+        EncoderPos = EncoderPos + EncoderStepsSmall;
+      }
+      if (EncoderPress == true) {
+        EncoderPos = EncoderPos + EncoderStepsBig;
+      }
+    } 
+*/
+
+    Data[EncoderSteps] = constrain(Data[EncoderSteps], DisplayMin, DisplayMax);
+    Serial.print("Speed: ");
+    Serial.println(Data[0]);
+
+    Serial.print("Heading: ");
+    Serial.println(Data[1]);
+
+    Serial.print("Altitude: ");
+    Serial.println(Data[2]);
+
+    Serial.print("VS: ");
+    Serial.println(Data[3]);
+  }
+ 
+  LastPinA = CurrentPinA;
+
+  EncoderCurrentState = digitalRead(EncoderButton);
+
+  if (EncoderCurrentState == LOW && EncoderLastState == HIGH) {
+    EncoderPress = !EncoderPress;
+    Serial.println(EncoderPress);
+  }
+  EncoderLastState = EncoderCurrentState;
+ 
+  // delay(1); //Maybe add if EncoderButton needs extra debounce (like the normal buttons)
+}
+
 void setup() {
   Serial.begin(115200);
 
@@ -232,6 +345,15 @@ void setup() {
   for (int i = 0; i < NUMDigits; i++) {
     pinMode(LatchPins[i], OUTPUT);
     digitalWrite(LatchPins[i], LOW);
+  }
+
+  for (int i = 0; i < NumModes; i++) {
+    if (i == 1) {
+      Data[i] = 1;
+    }
+    else {
+      Data[i] = 0;
+    }
   }
 
   pinMode(DataPinLED, OUTPUT);
@@ -274,4 +396,5 @@ void setup() {
 
 void loop() {
   ButtonLED();
+  Encoder();
 }

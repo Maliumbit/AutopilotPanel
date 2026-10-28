@@ -62,7 +62,7 @@ bool ButtonLastState[NUMButtons];
  
 bool LEDState[NUMButtons];
  
-byte LEDState1 = 0b00000000; //Maybe put 0b00000100 here to activate Altitude LED from the start
+byte LEDState1 = 0b00000100; //Maybe put 0b00000100 here to activate Altitude LED from the start
 byte LEDState2 = 0b00000000;
  
 bool LatchState = HIGH;
@@ -142,6 +142,13 @@ void ButtonLED() {
           }
  
           EncoderSteps = i;
+
+          if (i == 0 || i == 1) {
+            DisplaySpecial = i;
+          }
+          else {
+           DisplaySpecial = 2;
+          }
         }
      
         LEDState[i] = !LEDState[i];
@@ -158,14 +165,14 @@ void ButtonLED() {
               digitalWrite(CLKPin, LOW);
           }
  
-          for (int n = 7; n >= 0; n--) {
-            int bitValue = (LEDState1 >> n) & 1; //makes a bitvalue variable, that only stores the las bit due to & 1
+            for (int n = 7; n >= 0; n--) {
+              int bitValue = (LEDState1 >> n) & 1; //makes a bitvalue variable, that only stores the las bit due to & 1
  
-            digitalWrite(DataPinLED, bitValue);
+              digitalWrite(DataPinLED, bitValue);
  
-            digitalWrite(CLKPin, HIGH);
-            digitalWrite(CLKPin, LOW);
-          }
+              digitalWrite(CLKPin, HIGH);
+              digitalWrite(CLKPin, LOW);
+            }
           }
           else if (i > 7) {
             LEDState2 = LEDState2 | LEDs[i];
@@ -337,6 +344,97 @@ void Encoder() {
  
   // delay(1); //Maybe add if EncoderButton needs extra debounce (like the normal buttons)
 }
+
+void displayNum() {
+  int hundredks = (DisplayNumber / 100000) % 10;
+  int tenks = (DisplayNumber / 10000) % 10;
+  int ks = (DisplayNumber / 1000) % 10;
+  int hundreds = (DisplayNumber / 100) % 10;
+  int tens = (DisplayNumber / 10) % 10;
+  int ones = DisplayNumber % 10;
+
+/*  if (DisplaySpecial == 0) {
+    hundredks = 10;
+    tenks = 11;
+    ks = 12;
+  }
+  else if (DisplaySpecial == 1) {
+    hundredks = 13;
+    tenks = 12;
+    ks = 14;
+  }
+
+  if (EncoderSteps == 3) {
+    if (DisplayNumber < 0) {
+      hundredks = 15;
+    }
+    else if (DisplayNumber >= 0) {
+      hundredks = 16;
+    }
+  }
+*/
+  for (int n = 7; n >= 0; n--) {
+    int bitValue = (digits[hundredks] >> n) & 1; //makes a bitvalue variable, that only stores the las bit due to & 1
+
+    digitalWrite(DataPin7S, bitValue);
+ 
+    digitalWrite(CLKPin, HIGH);
+    digitalWrite(CLKPin, LOW);
+  }
+
+  for (int n = 7; n >= 0; n--) {
+    int bitValue = (digits[tenks] >> n) & 1; //makes a bitvalue variable, that only stores the las bit due to & 1
+
+    digitalWrite(DataPin7S, bitValue);
+ 
+    digitalWrite(CLKPin, HIGH);
+    digitalWrite(CLKPin, LOW);
+  }
+
+  for (int n = 7; n >= 0; n--) {
+    int bitValue = (digits[ks] >> n) & 1; //makes a bitvalue variable, that only stores the las bit due to & 1
+
+    digitalWrite(DataPin7S, bitValue);
+ 
+    digitalWrite(CLKPin, HIGH);
+    digitalWrite(CLKPin, LOW);
+  }
+
+  for (int n = 7; n >= 0; n--) {
+    int bitValue = (digits[hundreds] >> n) & 1; //makes a bitvalue variable, that only stores the las bit due to & 1
+
+    digitalWrite(DataPin7S, bitValue);
+ 
+    digitalWrite(CLKPin, HIGH);
+    digitalWrite(CLKPin, LOW);
+  }
+
+  for (int n = 7; n >= 0; n--) {
+    int bitValue = (digits[tens] >> n) & 1; //makes a bitvalue variable, that only stores the las bit due to & 1
+
+    digitalWrite(DataPin7S, bitValue);
+ 
+    digitalWrite(CLKPin, HIGH);
+    digitalWrite(CLKPin, LOW);
+  }
+
+  for (int n = 7; n >= 0; n--) {
+    int bitValue = (digits[ones] >> n) & 1; //makes a bitvalue variable, that only stores the las bit due to & 1
+
+    digitalWrite(DataPin7S, bitValue);
+ 
+    digitalWrite(CLKPin, HIGH);
+    digitalWrite(CLKPin, LOW);
+  }
+
+/*  shiftOut(DataPin7S, CLKPin, MSBFIRST, digits[hundredks]);
+  shiftOut(DataPin7S, CLKPin, MSBFIRST, digits[tenks]);
+  shiftOut(DataPin7S, CLKPin, MSBFIRST, digits[ks]);
+  shiftOut(DataPin7S, CLKPin, MSBFIRST, digits[hundreds]);
+  shiftOut(DataPin7S, CLKPin, MSBFIRST, digits[tens]);
+  shiftOut(DataPin7S, CLKPin, MSBFIRST, digits[ones]);
+*/
+} 
  
 void setup() {
   Serial.begin(115200);
@@ -406,4 +504,6 @@ void setup() {
 void loop() {
   ButtonLED();
   Encoder();
+  DisplayNumber = EncoderPos;
+  displayNum();
 }

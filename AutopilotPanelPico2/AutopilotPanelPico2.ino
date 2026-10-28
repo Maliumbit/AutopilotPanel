@@ -3,10 +3,10 @@ Make Encoder make different steps depending on which mode is active (HDG, Alt...
 Make Debounce of encoder Switch better, similar to debounce of normal switches (Done)
 Max and Min values for the 7 segment display depending on mode (Done)
 instead of the delay after the debounce, maybe try to solve with millis (only if debounce problem with encoder switch)
-add that if over 360 degrees in heading mode it starts back at 0 (Needs Testing line 301)
+add that if over 360 degrees in heading mode it starts back at 0 (Done)
 add that it saves the altitude or speed or such you set, so when you get back to that mode it still has that displayed (Done)
-when vs switches from positive to negative it stops at 0 and then continues (Needs Testing line 297)
-when encoder button gets pressed it should reset to small steps (Needs Testing line 274)
+when vs switches from positive to negative it stops at 0 and then continues (Done)
+when mode gets switched it should reset to small steps (Done)
 */
  
 #define NUMButtons 14 //Number of buttons for array
@@ -298,11 +298,11 @@ void Encoder() {
       Data[3] = 0;
     }
  
-    if (Data[1] == 361) { //Makes Heading a loop
-      Data[1] = 0;
+    if (Data[1] > 360) { //Makes Heading a loop
+      Data[1] = Data[1] - 360;
     }
-    else if (Data[1] == -1) {
-      Data[1] = 360;
+    else if (Data[1] < 1) {
+      Data[1] = Data[1] + 360;
     }
     else {
       Data[EncoderSteps] = constrain(Data[EncoderSteps], DisplayMin, DisplayMax);
@@ -332,6 +332,8 @@ void Encoder() {
   EncoderLastState = EncoderCurrentState;
  
   LastVS = CurrentVS;
+
+  LastEncoderSteps = EncoderSteps;
  
   // delay(1); //Maybe add if EncoderButton needs extra debounce (like the normal buttons)
 }

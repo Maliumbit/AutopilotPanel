@@ -82,7 +82,7 @@ byte digits[] = {
   0b01110011, //P
   0b01011110, //d
   0b01110110, //H
-  0b01111101, //G
+  0b01101111, //G
   0b01000000, //-
   0b00000000  //Nothing
 };
@@ -123,7 +123,7 @@ void ButtonLED() {
           LEDState1 = LEDState1 & LEDs[15];
           LEDState1 = LEDState1 | LEDs[i]; //Makes sure only 1 of the first 4 leds is on
  
-          for (int n = 7; n >= 0; n--) {
+          /*for (int n = 7; n >= 0; n--) {
             int bitValue = (LEDState2 >> n) & 1; //makes a bitvalue variable, that only stores the las bit due to & 1
  
             digitalWrite(DataPinLED, bitValue);
@@ -139,7 +139,7 @@ void ButtonLED() {
  
             digitalWrite(CLKPin, HIGH);
             digitalWrite(CLKPin, LOW);
-          }
+          }*/
  
           EncoderSteps = i;
 
@@ -153,7 +153,7 @@ void ButtonLED() {
      
         LEDState[i] = !LEDState[i];
  
-        if (LEDState[i] == false) {
+        /*if (LEDState[i] == false) {
           if (i < 8 && i > 3) {
             LEDState1 = LEDState1 | LEDs[i];
             for (int n = 7; n >= 0; n--) {
@@ -236,7 +236,7 @@ void ButtonLED() {
               digitalWrite(CLKPin, LOW);
             }
           }
-        }
+        }*/
       }
       ButtonLastState[i] = ButtonCurrentState[i];
     }
@@ -353,14 +353,14 @@ void displayNum() {
   int tens = (DisplayNumber / 10) % 10;
   int ones = DisplayNumber % 10;
 
-/*  if (DisplaySpecial == 0) {
+  if (DisplaySpecial == 0) {
     hundredks = 10;
     tenks = 11;
     ks = 12;
   }
   else if (DisplaySpecial == 1) {
     hundredks = 13;
-    tenks = 12;
+    tenks = 12; 
     ks = 14;
   }
 
@@ -372,36 +372,9 @@ void displayNum() {
       hundredks = 16;
     }
   }
-*/
-  for (int n = 7; n >= 0; n--) {
-    int bitValue = (digits[hundredks] >> n) & 1; //makes a bitvalue variable, that only stores the las bit due to & 1
-
-    digitalWrite(DataPin7S, bitValue);
  
-    digitalWrite(CLKPin, HIGH);
-    digitalWrite(CLKPin, LOW);
-  }
-
   for (int n = 7; n >= 0; n--) {
-    int bitValue = (digits[tenks] >> n) & 1; //makes a bitvalue variable, that only stores the las bit due to & 1
-
-    digitalWrite(DataPin7S, bitValue);
- 
-    digitalWrite(CLKPin, HIGH);
-    digitalWrite(CLKPin, LOW);
-  }
-
-  for (int n = 7; n >= 0; n--) {
-    int bitValue = (digits[ks] >> n) & 1; //makes a bitvalue variable, that only stores the las bit due to & 1
-
-    digitalWrite(DataPin7S, bitValue);
- 
-    digitalWrite(CLKPin, HIGH);
-    digitalWrite(CLKPin, LOW);
-  }
-
-  for (int n = 7; n >= 0; n--) {
-    int bitValue = (digits[hundreds] >> n) & 1; //makes a bitvalue variable, that only stores the las bit due to & 1
+    int bitValue = (digits[ones] >> n) & 1; //makes a bitvalue variable, that only stores the las bit due to & 1
 
     digitalWrite(DataPin7S, bitValue);
  
@@ -419,7 +392,34 @@ void displayNum() {
   }
 
   for (int n = 7; n >= 0; n--) {
-    int bitValue = (digits[ones] >> n) & 1; //makes a bitvalue variable, that only stores the las bit due to & 1
+    int bitValue = (digits[hundreds] >> n) & 1; //makes a bitvalue variable, that only stores the las bit due to & 1
+
+    digitalWrite(DataPin7S, bitValue);
+ 
+    digitalWrite(CLKPin, HIGH);
+    digitalWrite(CLKPin, LOW);
+  }
+
+  for (int n = 7; n >= 0; n--) {
+    int bitValue = (digits[ks] >> n) & 1; //makes a bitvalue variable, that only stores the las bit due to & 1
+
+    digitalWrite(DataPin7S, bitValue);
+ 
+    digitalWrite(CLKPin, HIGH);
+    digitalWrite(CLKPin, LOW);
+  }
+
+  for (int n = 7; n >= 0; n--) {
+    int bitValue = (digits[tenks] >> n) & 1; //makes a bitvalue variable, that only stores the las bit due to & 1
+
+    digitalWrite(DataPin7S, bitValue);
+ 
+    digitalWrite(CLKPin, HIGH);
+    digitalWrite(CLKPin, LOW);
+  }
+
+  for (int n = 7; n >= 0; n--) {
+    int bitValue = (digits[hundredks] >> n) & 1; //makes a bitvalue variable, that only stores the las bit due to & 1
 
     digitalWrite(DataPin7S, bitValue);
  
@@ -451,7 +451,7 @@ void setup() {
  
   for (int i = 0; i < NUMDigits; i++) {
     pinMode(LatchPins[i], OUTPUT);
-    digitalWrite(LatchPins[i], LOW);
+    digitalWrite(LatchPins[i], HIGH);
   }
  
   for (int i = 0; i < NumModes; i++) {
@@ -504,6 +504,12 @@ void setup() {
 void loop() {
   ButtonLED();
   Encoder();
-  DisplayNumber = EncoderPos;
+  DisplayNumber = Data[EncoderSteps];
   displayNum();
+
+  for (int i = 0; i < NUMDigits; i++) {
+    digitalWrite(LatchPins[i], HIGH);
+    delayMicroseconds(1);
+    digitalWrite(LatchPins[i], LOW);
+  }
 }

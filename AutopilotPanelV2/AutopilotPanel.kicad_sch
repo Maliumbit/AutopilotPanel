@@ -11289,6 +11289,12 @@
 		(uuid "108c18cf-ffbf-4619-87c1-2e24cd9f9871")
 	)
 	(junction
+		(at 742.95 271.78)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "10bb2548-f4b5-4f56-9151-39bff6edf4a9")
+	)
+	(junction
 		(at 567.69 336.55)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -11395,12 +11401,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "377d9dc4-b72f-4932-9220-ac58aa0befe3")
-	)
-	(junction
-		(at 280.67 278.13)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "39689c99-c324-4610-abda-1424b40c2183")
 	)
 	(junction
 		(at 796.29 158.75)
@@ -11623,6 +11623,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "803b7644-84a6-4684-a4a4-e39569f499d3")
+	)
+	(junction
+		(at 280.67 278.13)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "83ca03b2-f4bc-4b88-84c7-5945b108da57")
 	)
 	(junction
 		(at 742.95 487.68)
@@ -11983,12 +11989,6 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e7d4e5aa-2e6a-4b4e-8170-7b2685707c18")
-	)
-	(junction
-		(at 742.95 271.78)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "e85adea8-3778-464e-8a7b-d8c3acc583e2")
 	)
 	(junction
 		(at 762 326.39)
@@ -13266,7 +13266,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 342.9) (xy 193.04 342.9)
+			(xy 90.17 341.63) (xy 193.04 341.63)
 		)
 		(stroke
 			(width 0)
@@ -14246,7 +14246,7 @@
 	)
 	(wire
 		(pts
-			(xy 80.01 354.33) (xy 86.36 354.33)
+			(xy 80.01 354.33) (xy 87.63 354.33)
 		)
 		(stroke
 			(width 0)
@@ -16723,6 +16723,16 @@
 			(type default)
 		)
 		(uuid "7cc14209-0024-4ee8-a7ac-a4371f106d7e")
+	)
+	(wire
+		(pts
+			(xy 741.68 271.78) (xy 741.68 270.51)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7d17b42c-fb94-40c0-ad31-1c4f370ce0c6")
 	)
 	(wire
 		(pts
@@ -19336,7 +19346,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 339.09) (xy 193.04 339.09)
+			(xy 87.63 339.09) (xy 193.04 339.09)
 		)
 		(stroke
 			(width 0)
@@ -19543,6 +19553,16 @@
 			(type default)
 		)
 		(uuid "c58a187f-9e08-4022-86d5-5cbfd2235866")
+	)
+	(wire
+		(pts
+			(xy 85.09 345.44) (xy 85.09 346.71)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "c5aeb2d6-1943-46f1-8626-f9ea5bc967c5")
 	)
 	(wire
 		(pts
@@ -20516,7 +20536,7 @@
 	)
 	(wire
 		(pts
-			(xy 74.93 358.14) (xy 88.9 358.14)
+			(xy 74.93 358.14) (xy 90.17 358.14)
 		)
 		(stroke
 			(width 0)
@@ -20926,7 +20946,7 @@
 	)
 	(wire
 		(pts
-			(xy 86.36 354.33) (xy 86.36 339.09)
+			(xy 87.63 354.33) (xy 87.63 339.09)
 		)
 		(stroke
 			(width 0)
@@ -21096,7 +21116,7 @@
 	)
 	(wire
 		(pts
-			(xy 88.9 358.14) (xy 88.9 342.9)
+			(xy 90.17 358.14) (xy 90.17 341.63)
 		)
 		(stroke
 			(width 0)
@@ -21675,7 +21695,7 @@
 		(uuid "0f8f8896-2f01-40f5-9a50-73cf1bf39511")
 	)
 	(label "GPIO2"
-		(at 193.04 342.9 180)
+		(at 193.04 341.63 180)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -28864,7 +28884,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "19434eb7-10fd-48cd-bd23-a161b7c09dc3")
-		(property "Reference" "U23"
+		(property "Reference" "U8"
 			(at 735.584 487.934 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -28886,7 +28906,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:TSSOP-16_4.4x5mm_P0.65mm"
 			(at 742.95 504.19 0)
 			(hide yes)
 			(show_name no)
@@ -28970,7 +28990,7 @@
 		(instances
 			(project "AutopilotPanel"
 				(path "/dba70fef-8915-4b4a-b054-f2673c163bab"
-					(reference "U23")
+					(reference "U8")
 					(unit 1)
 				)
 			)
@@ -29886,7 +29906,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1dc8e179-5de7-4dd1-8b99-a3d7a4b1e3cc")
-		(property "Reference" "U22"
+		(property "Reference" "U7"
 			(at 735.584 444.754 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -29908,7 +29928,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:TSSOP-16_4.4x5mm_P0.65mm"
 			(at 742.95 461.01 0)
 			(hide yes)
 			(show_name no)
@@ -29992,7 +30012,7 @@
 		(instances
 			(project "AutopilotPanel"
 				(path "/dba70fef-8915-4b4a-b054-f2673c163bab"
-					(reference "U22")
+					(reference "U7")
 					(unit 1)
 				)
 			)
@@ -30477,7 +30497,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "2334dac1-24a8-407c-9ab4-5e67708d6020")
-		(property "Reference" "U2"
+		(property "Reference" "U1"
 			(at 433.832 446.024 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -30843,7 +30863,7 @@
 			)
 			(project "AutopilotPanel"
 				(path "/dba70fef-8915-4b4a-b054-f2673c163bab"
-					(reference "U2")
+					(reference "U1")
 					(unit 1)
 				)
 			)
@@ -31761,7 +31781,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "2897e3ac-9d2e-49c6-83ba-b99017a5b363")
-		(property "Reference" "U9"
+		(property "Reference" "U13"
 			(at 718.566 273.05 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -31848,7 +31868,7 @@
 		(instances
 			(project "AutopilotPanel"
 				(path "/dba70fef-8915-4b4a-b054-f2673c163bab"
-					(reference "U9")
+					(reference "U13")
 					(unit 1)
 				)
 			)
@@ -32906,7 +32926,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "34ff7c8a-e88f-456e-b9a0-daae2a548e54")
-		(property "Reference" "U18"
+		(property "Reference" "U3"
 			(at 735.584 272.034 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -32928,7 +32948,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:TSSOP-16_4.4x5mm_P0.65mm"
 			(at 742.95 288.29 0)
 			(hide yes)
 			(show_name no)
@@ -33012,7 +33032,7 @@
 		(instances
 			(project "AutopilotPanel"
 				(path "/dba70fef-8915-4b4a-b054-f2673c163bab"
-					(reference "U18")
+					(reference "U3")
 					(unit 1)
 				)
 			)
@@ -34267,7 +34287,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "3a72bf24-77d8-4f11-ac86-c7ad93d26785")
-		(property "Reference" "U21"
+		(property "Reference" "U6"
 			(at 735.584 401.574 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -34289,7 +34309,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:TSSOP-16_4.4x5mm_P0.65mm"
 			(at 742.95 417.83 0)
 			(hide yes)
 			(show_name no)
@@ -34373,7 +34393,7 @@
 		(instances
 			(project "AutopilotPanel"
 				(path "/dba70fef-8915-4b4a-b054-f2673c163bab"
-					(reference "U21")
+					(reference "U6")
 					(unit 1)
 				)
 			)
@@ -37524,7 +37544,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "4f6bb4ff-0cd7-40dc-97c9-06f4dcc36f15")
-		(property "Reference" "U11"
+		(property "Reference" "U15"
 			(at 711.2 354.33 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -37611,7 +37631,7 @@
 		(instances
 			(project "AutopilotPanel"
 				(path "/dba70fef-8915-4b4a-b054-f2673c163bab"
-					(reference "U11")
+					(reference "U15")
 					(unit 1)
 				)
 			)
@@ -39805,7 +39825,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "627e801f-82bf-4bfb-8880-b85a3ff2fb18")
-		(property "Reference" "U16"
+		(property "Reference" "U2"
 			(at 281.94 323.85 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -39889,7 +39909,7 @@
 		(instances
 			(project "AutopilotPanel"
 				(path "/dba70fef-8915-4b4a-b054-f2673c163bab"
-					(reference "U16")
+					(reference "U2")
 					(unit 1)
 				)
 			)
@@ -40805,7 +40825,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "68700bec-e3c1-4e35-bb30-9f60c78bcc02")
-		(property "Reference" "U10"
+		(property "Reference" "U14"
 			(at 711.2 311.15 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -40892,7 +40912,7 @@
 		(instances
 			(project "AutopilotPanel"
 				(path "/dba70fef-8915-4b4a-b054-f2673c163bab"
-					(reference "U10")
+					(reference "U14")
 					(unit 1)
 				)
 			)
@@ -41564,7 +41584,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "6ff8b561-7067-4f18-8c5a-166d680ceb2c")
-		(property "Reference" "U25"
+		(property "Reference" "U10"
 			(at 762.254 180.594 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -41586,7 +41606,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:TSSOP-16_4.4x5mm_P0.65mm"
 			(at 769.62 196.85 0)
 			(hide yes)
 			(show_name no)
@@ -41670,7 +41690,7 @@
 		(instances
 			(project "AutopilotPanel"
 				(path "/dba70fef-8915-4b4a-b054-f2673c163bab"
-					(reference "U25")
+					(reference "U10")
 					(unit 1)
 				)
 			)
@@ -46849,7 +46869,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a5a4da21-c661-4ee4-826a-d48995d800f7")
-		(property "Reference" "U17"
+		(property "Reference" "U12"
 			(at 139.3033 405.13 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -46871,7 +46891,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:TSSOP-16_4.4x5mm_P0.65mm"
 			(at 137.16 427.99 0)
 			(hide yes)
 			(show_name no)
@@ -46955,7 +46975,7 @@
 		(instances
 			(project "AutopilotPanel"
 				(path "/dba70fef-8915-4b4a-b054-f2673c163bab"
-					(reference "U17")
+					(reference "U12")
 					(unit 1)
 				)
 			)
@@ -46974,7 +46994,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "a5ecd809-5ca4-4e31-a2ff-11707fef5610")
-		(property "Reference" "U12"
+		(property "Reference" "U16"
 			(at 711.2 397.51 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -47061,7 +47081,7 @@
 		(instances
 			(project "AutopilotPanel"
 				(path "/dba70fef-8915-4b4a-b054-f2673c163bab"
-					(reference "U12")
+					(reference "U16")
 					(unit 1)
 				)
 			)
@@ -49226,7 +49246,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "bb6c8adb-3524-43ca-b849-588ceb1296c2")
-		(property "Reference" "U14"
+		(property "Reference" "U18"
 			(at 711.2 483.87 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -49313,7 +49333,7 @@
 		(instances
 			(project "AutopilotPanel"
 				(path "/dba70fef-8915-4b4a-b054-f2673c163bab"
-					(reference "U14")
+					(reference "U18")
 					(unit 1)
 				)
 			)
@@ -50609,7 +50629,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "c786bc9e-2bac-4bde-8213-2f2cf3ea4b89")
-		(property "Reference" "U13"
+		(property "Reference" "U17"
 			(at 711.2 440.69 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -50696,7 +50716,7 @@
 		(instances
 			(project "AutopilotPanel"
 				(path "/dba70fef-8915-4b4a-b054-f2673c163bab"
-					(reference "U13")
+					(reference "U17")
 					(unit 1)
 				)
 			)
@@ -50704,7 +50724,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 741.68 271.78 0)
+		(at 741.68 270.51 0)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -50714,7 +50734,7 @@
 		(dnp no)
 		(uuid "c816892c-e07c-4de5-a257-16b90290661a")
 		(property "Reference" "#PWR049"
-			(at 741.68 275.59 0)
+			(at 741.68 274.32 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -50725,7 +50745,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 737.87 270.002 0)
+			(at 737.87 268.732 0)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -50735,7 +50755,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 741.68 271.78 0)
+			(at 741.68 270.51 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -50746,7 +50766,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 741.68 271.78 0)
+			(at 741.68 270.51 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -50757,7 +50777,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
-			(at 741.68 271.78 0)
+			(at 741.68 270.51 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -51031,7 +51051,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c93f1afc-a9b6-490f-b983-8c9c39aa0acd")
-		(property "Reference" "U19"
+		(property "Reference" "U4"
 			(at 735.584 315.214 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -51053,7 +51073,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:TSSOP-16_4.4x5mm_P0.65mm"
 			(at 742.95 331.47 0)
 			(hide yes)
 			(show_name no)
@@ -51137,7 +51157,7 @@
 		(instances
 			(project "AutopilotPanel"
 				(path "/dba70fef-8915-4b4a-b054-f2673c163bab"
-					(reference "U19")
+					(reference "U4")
 					(unit 1)
 				)
 			)
@@ -52018,7 +52038,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d0d217bc-6210-4958-9652-5465bab223d4")
-		(property "Reference" "U15"
+		(property "Reference" "U11"
 			(at 159.004 357.124 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -52040,7 +52060,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:TSSOP-16_4.4x5mm_P0.65mm"
 			(at 171.45 379.73 0)
 			(hide yes)
 			(show_name no)
@@ -52124,7 +52144,7 @@
 		(instances
 			(project "AutopilotPanel"
 				(path "/dba70fef-8915-4b4a-b054-f2673c163bab"
-					(reference "U15")
+					(reference "U11")
 					(unit 1)
 				)
 			)
@@ -52142,7 +52162,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d18ff0be-69b9-41af-962c-f04c451dfea5")
-		(property "Reference" "U20"
+		(property "Reference" "U5"
 			(at 735.584 358.394 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -52164,7 +52184,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:TSSOP-16_4.4x5mm_P0.65mm"
 			(at 742.95 374.65 0)
 			(hide yes)
 			(show_name no)
@@ -52248,7 +52268,7 @@
 		(instances
 			(project "AutopilotPanel"
 				(path "/dba70fef-8915-4b4a-b054-f2673c163bab"
-					(reference "U20")
+					(reference "U5")
 					(unit 1)
 				)
 			)
@@ -53554,6 +53574,83 @@
 		)
 	)
 	(symbol
+		(lib_id "power:GND")
+		(at 85.09 346.71 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "db1dd44d-adc9-430e-af63-6f4aa19cec3e")
+		(property "Reference" "#PWR047"
+			(at 85.09 353.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 85.09 350.774 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 85.09 346.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 85.09 346.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+			(at 85.09 346.71 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "9ad11735-e2dd-4797-b5b7-2b4779129f96")
+		)
+		(instances
+			(project "AutopilotPanel"
+				(path "/dba70fef-8915-4b4a-b054-f2673c163bab"
+					(reference "#PWR047")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "PCM_SL_Pin_Headers:PINHD_1x2_Male")
 		(at 170.18 327.66 0)
 		(unit 1)
@@ -54308,7 +54405,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e226ab54-a47f-4f71-86ed-17879fdbe66c")
-		(property "Reference" "U24"
+		(property "Reference" "U9"
 			(at 760.984 137.414 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -54330,7 +54427,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" ""
+		(property "Footprint" "Package_SO:TSSOP-16_4.4x5mm_P0.65mm"
 			(at 768.35 153.67 0)
 			(hide yes)
 			(show_name no)
@@ -54414,7 +54511,7 @@
 		(instances
 			(project "AutopilotPanel"
 				(path "/dba70fef-8915-4b4a-b054-f2673c163bab"
-					(reference "U24")
+					(reference "U9")
 					(unit 1)
 				)
 			)

@@ -213,9 +213,13 @@
         0.0,
         0.1,
         0.15,
+        0.159017,
         0.2,
         0.25,
-        0.5
+        0.3,
+        0.4,
+        0.5,
+        0.8
       ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
@@ -533,6 +537,21 @@
         "via_diameter": 0.6,
         "via_drill": 0.3,
         "wire_width": 6
+      },
+      {
+        "clearance": 0.15,
+        "diff_pair_gap": 0.2032,
+        "diff_pair_width": 0.159017,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "USB_Diff_90",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 0,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.15,
+        "tuning_profile": "",
+        "via_diameter": 0.6,
+        "via_drill": 0.3
       }
     ],
     "meta": {
@@ -542,8 +561,20 @@
     "netclass_assignments": null,
     "netclass_patterns": [
       {
+        "netclass": "USB_Diff_90",
+        "pattern": "/USB_D+"
+      },
+      {
+        "netclass": "USB_Diff_90",
+        "pattern": "/USB_D-"
+      },
+      {
         "netclass": "Default",
-        "pattern": ""
+        "pattern": "/USB_CONN_D+"
+      },
+      {
+        "netclass": "Default",
+        "pattern": "/USB_CONN_D-"
       }
     ]
   },
@@ -694,7 +725,7 @@
         "uuid": "dba70fef-8915-4b4a-b054-f2673c163bab"
       }
     ],
-    "used_designators": "U1-25,SW1-14,SW16-17,A1,Q1-6,D1-17,#PWR1-141,#PWR146,#PWR148,#PWR150-152,#PWR154-181,R1-48,R50-89,R95-100,C1-13,J1-11,L1-2",
+    "used_designators": "U1-25,SW1-14,SW16-17,A1,Q1-6,D1-17,#PWR1-143,#PWR146,#PWR148,#PWR150-152,#PWR154-181,R1-48,R50-89,R95-100,C1-13,J1-11,L1-2",
     "variants": []
   },
   "sheets": [

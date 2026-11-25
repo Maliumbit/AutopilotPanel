@@ -8067,201 +8067,6 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "RPI_DB:Mechanical | Mounting_Holes/RP-01HF5R-LCTEJS"
-			(pin_numbers
-				(hide yes)
-			)
-			(pin_names
-				(offset 1.016)
-				(hide yes)
-			)
-			(exclude_from_sim no)
-			(in_bom no)
-			(on_board yes)
-			(in_pos_files yes)
-			(duplicate_pin_numbers_are_jumpers no)
-			(property "Reference" "MH"
-				(at 2.54 1.27 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Value" "NPTH FD2.75mm SM3.15mm KO6mm"
-				(at 2.54 -1.27 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(justify left)
-				)
-			)
-			(property "Footprint" "RPI_COMPILED:none_mh_npth_fd2p75mm_sm3p15mm_ko6mm"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Datasheet" "file:///C:\\rpi-pdb\\parts\\Mechanical\\Mounting_Holes\\NONE_MH_NPTH_FD2P75MM_SM3P15MM_KO6MM\\datasheets"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Description" "Mounting Hole, NPTH, Finished Dia=2.75mm, Soldermask Dia=3.15mm, Keep Out Dia=6mm"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "part_uid" "RP-01HF5R-LCTEJS"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "status" "OK"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "manufacturer" "None"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "manufacturer_pn" "MH_NPTH_FD2P75MM_SM3P15MM_KO6MM"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "packaging" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "packaging_qty" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "lcsc_pn" ""
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "size" "FD2.75mm SM3.15mm KO6mm"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "ki_fp_filters" "RPI_COMPILED:none_mh_npth_fd2p75mm_sm3p15mm_ko6mm"
-				(at 0 0 0)
-				(show_name no)
-				(do_not_autoplace no)
-				(hide yes)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(symbol "Mechanical | Mounting_Holes/RP-01HF5R-LCTEJS_0_1"
-				(circle
-					(center 0 0)
-					(radius 1.905)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "Mechanical | Mounting_Holes/RP-01HF5R-LCTEJS_1_1"
-				(circle
-					(center 0 0)
-					(radius 0.635)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type outline)
-					)
-				)
-			)
-			(embedded_fonts no)
-		)
 		(symbol "RPI_DB:Resistors | Chip | M1005/RP-019A1P-4Z6ZWY"
 			(pin_numbers
 				(hide yes)
@@ -11137,6 +10942,12 @@
 		(uuid "c45a4ff9-a6b2-4b19-a25b-89b0f5cb8c6f")
 	)
 	(junction
+		(at 480.06 410.21)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c548d13d-b5b9-4e84-9381-36edf59dd8e5")
+	)
+	(junction
 		(at 521.97 336.55)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -11233,6 +11044,12 @@
 		(uuid "e9d7346b-513c-4357-bcde-6b17d0308294")
 	)
 	(junction
+		(at 753.11 271.78)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "ea29cc9f-96b6-4b21-9e0c-9118a6c1dba9")
+	)
+	(junction
 		(at 276.86 261.62)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -11311,12 +11128,24 @@
 		(uuid "fe0fad2b-143e-488f-8113-6eb731e0296d")
 	)
 	(no_connect
+		(at 420.37 400.05)
+		(uuid "02e63b61-8635-4321-b154-fed7c6ffdf04")
+	)
+	(no_connect
+		(at 415.29 400.05)
+		(uuid "0c19d828-abd2-4a6f-be63-1ee8e88d2af0")
+	)
+	(no_connect
 		(at 703.58 382.27)
 		(uuid "0ca82e3a-713e-4fd9-8d9b-cb7186936250")
 	)
 	(no_connect
 		(at 703.58 425.45)
 		(uuid "16bc11c7-07f2-4b7a-97a7-585f9a6c82da")
+	)
+	(no_connect
+		(at 422.91 400.05)
+		(uuid "1fc22832-e0a1-4f08-b517-5bd4675402dd")
 	)
 	(no_connect
 		(at 483.87 448.31)
@@ -11359,6 +11188,10 @@
 		(uuid "89543da4-a58e-459c-8679-be3dca12e578")
 	)
 	(no_connect
+		(at 425.45 400.05)
+		(uuid "8dd3f9a4-695e-4de5-a9c7-6a1165b84c7b")
+	)
+	(no_connect
 		(at 483.87 463.55)
 		(uuid "94d81380-b6c5-4d3f-9a1d-7b8609ad16a9")
 	)
@@ -11369,6 +11202,10 @@
 	(no_connect
 		(at 274.32 248.92)
 		(uuid "a626de30-ea51-4346-9d46-2124d4ce05e9")
+	)
+	(no_connect
+		(at 417.83 400.05)
+		(uuid "bbcb9f77-3dd5-43ec-b991-cab819cc5a5d")
 	)
 	(no_connect
 		(at 149.86 415.29)
@@ -13335,6 +13172,16 @@
 			(type default)
 		)
 		(uuid "38ec881e-30ac-417f-b56e-6d9afe68a5ed")
+	)
+	(wire
+		(pts
+			(xy 480.06 408.94) (xy 480.06 410.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "38f360d3-ca35-4d65-b175-286d68fe8c13")
 	)
 	(wire
 		(pts
@@ -15448,6 +15295,16 @@
 	)
 	(wire
 		(pts
+			(xy 480.06 410.21) (xy 497.84 410.21)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "79bf5eca-8975-439c-9988-2ecf846291e6")
+	)
+	(wire
+		(pts
 			(xy 579.12 331.47) (xy 579.12 336.55)
 		)
 		(stroke
@@ -16958,7 +16815,7 @@
 	)
 	(wire
 		(pts
-			(xy 455.93 410.21) (xy 497.84 410.21)
+			(xy 455.93 410.21) (xy 480.06 410.21)
 		)
 		(stroke
 			(width 0)
@@ -19765,6 +19622,16 @@
 			(type default)
 		)
 		(uuid "fb89b8cf-6a59-42a2-afef-137629bb889f")
+	)
+	(wire
+		(pts
+			(xy 753.11 271.78) (xy 754.38 271.78)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fbecbeea-8efe-44cb-9101-fdd647d4fd15")
 	)
 	(wire
 		(pts
@@ -22789,594 +22656,6 @@
 			(project "AutopilotPanel"
 				(path "/dba70fef-8915-4b4a-b054-f2673c163bab"
 					(reference "C29")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "RPI_DB:Mechanical | Mounting_Holes/RP-01HF5R-LCTEJS")
-		(at 306.07 556.26 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005ef4c292")
-		(property "Reference" "MH1"
-			(at 308.61 554.99 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "NPTH FD2.75mm SM3.15mm KO6mm"
-			(at 308.61 557.53 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "RPI_COMPILED:none_mh_npth_fd2p75mm_sm3p15mm_ko6mm"
-			(at 306.07 556.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "file:///C:\\rpi-pdb\\parts\\Mechanical\\Mounting_Holes\\NONE_MH_NPTH_FD2P75MM_SM3P15MM_KO6MM\\datasheets"
-			(at 306.07 556.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Mounting Hole, NPTH, Finished Dia=2.75mm, Soldermask Dia=3.15mm, Keep Out Dia=6mm"
-			(at 306.07 556.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "part_uid" "RP-01HF5R-LCTEJS"
-			(at 306.07 556.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "manufacturer" "None"
-			(at 306.07 556.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "manufacturer_pn" "MH_NPTH_FD2P75MM_SM3P15MM_KO6MM"
-			(at 306.07 556.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "packaging" ""
-			(at 306.07 556.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "packaging_qty" ""
-			(at 306.07 556.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "size" "FD2.75mm SM3.15mm KO6mm"
-			(at 306.07 556.26 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(instances
-			(project "RPI-RP2350A-MINIMAL_R4-S1"
-				(path "/94683f5c-9cd9-448e-be96-9792537b5cb8"
-					(reference "MH1")
-					(unit 1)
-				)
-			)
-			(project "AutopilotPanel"
-				(path "/dba70fef-8915-4b4a-b054-f2673c163bab"
-					(reference "MH1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "RPI_DB:Mechanical | Mounting_Holes/RP-01HF5R-LCTEJS")
-		(at 306.07 561.34 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005ef4cf1f")
-		(property "Reference" "MH2"
-			(at 308.61 560.07 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "NPTH FD2.75mm SM3.15mm KO6mm"
-			(at 308.61 562.61 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "RPI_COMPILED:none_mh_npth_fd2p75mm_sm3p15mm_ko6mm"
-			(at 306.07 561.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "file:///C:\\rpi-pdb\\parts\\Mechanical\\Mounting_Holes\\NONE_MH_NPTH_FD2P75MM_SM3P15MM_KO6MM\\datasheets"
-			(at 306.07 561.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Mounting Hole, NPTH, Finished Dia=2.75mm, Soldermask Dia=3.15mm, Keep Out Dia=6mm"
-			(at 306.07 561.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "part_uid" "RP-01HF5R-LCTEJS"
-			(at 306.07 561.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "manufacturer" "None"
-			(at 306.07 561.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "manufacturer_pn" "MH_NPTH_FD2P75MM_SM3P15MM_KO6MM"
-			(at 306.07 561.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "packaging" ""
-			(at 306.07 561.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "packaging_qty" ""
-			(at 306.07 561.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "size" "FD2.75mm SM3.15mm KO6mm"
-			(at 306.07 561.34 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(instances
-			(project "RPI-RP2350A-MINIMAL_R4-S1"
-				(path "/94683f5c-9cd9-448e-be96-9792537b5cb8"
-					(reference "MH2")
-					(unit 1)
-				)
-			)
-			(project "AutopilotPanel"
-				(path "/dba70fef-8915-4b4a-b054-f2673c163bab"
-					(reference "MH2")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "RPI_DB:Mechanical | Mounting_Holes/RP-01HF5R-LCTEJS")
-		(at 306.07 566.42 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005ef4d323")
-		(property "Reference" "MH3"
-			(at 308.61 565.15 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "NPTH FD2.75mm SM3.15mm KO6mm"
-			(at 308.61 567.69 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "RPI_COMPILED:none_mh_npth_fd2p75mm_sm3p15mm_ko6mm"
-			(at 306.07 566.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "file:///C:\\rpi-pdb\\parts\\Mechanical\\Mounting_Holes\\NONE_MH_NPTH_FD2P75MM_SM3P15MM_KO6MM\\datasheets"
-			(at 306.07 566.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Mounting Hole, NPTH, Finished Dia=2.75mm, Soldermask Dia=3.15mm, Keep Out Dia=6mm"
-			(at 306.07 566.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "part_uid" "RP-01HF5R-LCTEJS"
-			(at 306.07 566.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "manufacturer" "None"
-			(at 306.07 566.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "manufacturer_pn" "MH_NPTH_FD2P75MM_SM3P15MM_KO6MM"
-			(at 306.07 566.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "packaging" ""
-			(at 306.07 566.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "packaging_qty" ""
-			(at 306.07 566.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "size" "FD2.75mm SM3.15mm KO6mm"
-			(at 306.07 566.42 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(instances
-			(project "RPI-RP2350A-MINIMAL_R4-S1"
-				(path "/94683f5c-9cd9-448e-be96-9792537b5cb8"
-					(reference "MH3")
-					(unit 1)
-				)
-			)
-			(project "AutopilotPanel"
-				(path "/dba70fef-8915-4b4a-b054-f2673c163bab"
-					(reference "MH3")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "RPI_DB:Mechanical | Mounting_Holes/RP-01HF5R-LCTEJS")
-		(at 306.07 571.5 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom no)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "00000000-0000-0000-0000-00005ef4d57b")
-		(property "Reference" "MH4"
-			(at 308.61 570.23 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "NPTH FD2.75mm SM3.15mm KO6mm"
-			(at 308.61 572.77 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "RPI_COMPILED:none_mh_npth_fd2p75mm_sm3p15mm_ko6mm"
-			(at 306.07 571.5 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" "file:///C:\\rpi-pdb\\parts\\Mechanical\\Mounting_Holes\\NONE_MH_NPTH_FD2P75MM_SM3P15MM_KO6MM\\datasheets"
-			(at 306.07 571.5 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Mounting Hole, NPTH, Finished Dia=2.75mm, Soldermask Dia=3.15mm, Keep Out Dia=6mm"
-			(at 306.07 571.5 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "part_uid" "RP-01HF5R-LCTEJS"
-			(at 306.07 571.5 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "manufacturer" "None"
-			(at 306.07 571.5 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "manufacturer_pn" "MH_NPTH_FD2P75MM_SM3P15MM_KO6MM"
-			(at 306.07 571.5 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "packaging" ""
-			(at 306.07 571.5 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "packaging_qty" ""
-			(at 306.07 571.5 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "size" "FD2.75mm SM3.15mm KO6mm"
-			(at 306.07 571.5 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(instances
-			(project "RPI-RP2350A-MINIMAL_R4-S1"
-				(path "/94683f5c-9cd9-448e-be96-9792537b5cb8"
-					(reference "MH4")
-					(unit 1)
-				)
-			)
-			(project "AutopilotPanel"
-				(path "/dba70fef-8915-4b4a-b054-f2673c163bab"
-					(reference "MH4")
 					(unit 1)
 				)
 			)
@@ -39341,6 +38620,83 @@
 		)
 	)
 	(symbol
+		(lib_id "PCM_4ms_Power-symbol:PWR_FLAG")
+		(at 754.38 271.78 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "753b26d5-28a1-4e3c-955b-74f7e80a21a2")
+		(property "Reference" "#FLG05"
+			(at 754.38 269.875 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 760.476 270.256 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 754.38 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 754.38 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 754.38 271.78 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "43d1ac9a-f613-4892-a4aa-adf4a5d96d10")
+		)
+		(instances
+			(project "AutopilotPanel"
+				(path "/dba70fef-8915-4b4a-b054-f2673c163bab"
+					(reference "#FLG05")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R")
 		(at 723.9 417.83 90)
 		(unit 1)
@@ -53372,6 +52728,84 @@
 		)
 	)
 	(symbol
+		(lib_id "PCM_4ms_Power-symbol:PWR_FLAG")
+		(at 480.06 408.94 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "ef51597f-4469-43b5-a26c-0c18b3a9b875")
+		(property "Reference" "#FLG04"
+			(at 480.06 407.035 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "PWR_FLAG"
+			(at 480.06 403.86 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 480.06 408.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 480.06 408.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" ""
+			(at 480.06 408.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "48c5b619-b03d-40a5-a62e-fb9a547fd789")
+		)
+		(instances
+			(project "AutopilotPanel"
+				(path "/dba70fef-8915-4b4a-b054-f2673c163bab"
+					(reference "#FLG04")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 101.6 511.81 0)
 		(unit 1)
@@ -55562,16 +54996,15 @@
 			"00000000-0000-0000-0000-00005eeee897" "00000000-0000-0000-0000-00005eef00bb"
 			"00000000-0000-0000-0000-00005eef0473" "00000000-0000-0000-0000-00005eef0994"
 			"00000000-0000-0000-0000-00005eef89b3" "00000000-0000-0000-0000-00005eef89bd"
-			"00000000-0000-0000-0000-00005ef4c292" "00000000-0000-0000-0000-00005ef4cf1f"
-			"00000000-0000-0000-0000-00005ef4d323" "00000000-0000-0000-0000-00005ef4d57b"
 			"00000000-0000-0000-0000-00005f1af96d" "00129810-3828-4559-81a3-430eb80f79f2"
 			"0014801d-eae5-44d3-8fe2-3efac6de30b1" "009732a9-7532-424a-8f74-a665eb04db0f"
-			"02ff75c3-c38e-47e2-aee2-89d7eacbd925" "03f10ee0-0bee-4679-8c7a-6239bfcffbcb"
-			"050961bb-69fc-4f78-a9b0-3ba6bd43de84" "057a282f-9b52-494a-8038-ac13e411a633"
-			"058de15f-9eff-4c08-89cd-d24f9d37ec01" "06a5e8e9-2095-408d-acea-d4a57a37d182"
-			"072953b7-3d10-4199-868e-73ed0955555a" "07c482d0-0350-4235-901a-7f510db8ba7b"
-			"09e14bba-690d-4b49-a7c0-adf8964965e8" "0a3d7ba3-c1dd-412e-af7b-1f1cd7862a48"
-			"0b3bab0f-b016-4113-a796-a04a35ac71b8" "0b7e8c0d-a973-4b10-84f7-93fd51e0251d"
+			"02e63b61-8635-4321-b154-fed7c6ffdf04" "02ff75c3-c38e-47e2-aee2-89d7eacbd925"
+			"03f10ee0-0bee-4679-8c7a-6239bfcffbcb" "050961bb-69fc-4f78-a9b0-3ba6bd43de84"
+			"057a282f-9b52-494a-8038-ac13e411a633" "058de15f-9eff-4c08-89cd-d24f9d37ec01"
+			"06a5e8e9-2095-408d-acea-d4a57a37d182" "072953b7-3d10-4199-868e-73ed0955555a"
+			"07c482d0-0350-4235-901a-7f510db8ba7b" "09e14bba-690d-4b49-a7c0-adf8964965e8"
+			"0a3d7ba3-c1dd-412e-af7b-1f1cd7862a48" "0b3bab0f-b016-4113-a796-a04a35ac71b8"
+			"0b7e8c0d-a973-4b10-84f7-93fd51e0251d" "0c19d828-abd2-4a6f-be63-1ee8e88d2af0"
 			"0d050ce4-fb9e-461d-89d4-c3930ef3e487" "0e61a68c-befc-4638-818a-7892c424942c"
 			"0e86278c-8831-456f-a7df-90650dd41827" "0ed68b90-7e3a-4eff-8e22-f66051ca6472"
 			"0f37ec08-9c8a-4710-8f07-00eab64a6da9" "0f937867-f0f7-48de-bc68-5cf848afab74"
@@ -55585,70 +55018,71 @@
 			"1ad2199f-9ca7-4e75-b4b8-748c525b2543" "1baf75ce-b576-4e5b-a968-eae4e1150743"
 			"1bbded82-2d94-49af-b970-c60ff6115efd" "1bc542ec-027b-49d8-9a77-9418dfd24d62"
 			"1ce8931a-11f8-4959-8315-7d24434d6111" "1f91eb7e-fe18-4698-8f64-379308aaf203"
-			"200c63f4-71d8-40f8-9baa-b759e6ec6bba" "2081fae0-9e2f-41ba-bb8e-0d8113bf390a"
-			"2166ed2e-0dad-4c40-b7c1-87559fbc1e5e" "21be83a7-99da-4d10-b057-d953cf2c1f81"
-			"220d4f54-abdf-4800-9fab-ed23708941e4" "2334dac1-24a8-407c-9ab4-5e67708d6020"
-			"258c4816-45ff-4431-9120-72ed127013b5" "264a8c3a-cb18-4ae9-9357-bdaa189bd561"
-			"28174815-c6a8-457a-80d4-bcc432255b5c" "2e4a645d-36c7-44a0-a9f1-1b322669188a"
-			"2edd09a0-2ced-4388-8429-7e3a4530639b" "2f636757-33b6-448b-bb2f-94afdd342ad4"
-			"30cab685-24c7-4bd8-ac3d-cfc54f9f823f" "32d8a9d0-41b0-4d00-900a-d5b6abb61b91"
-			"34652a30-ac4b-4a89-a81a-929b1eeb1963" "34a9e71a-6d62-4f50-b89d-581f181ec6eb"
-			"3551439a-9f45-4796-a6ff-5526d872b812" "355380b8-2783-4724-b79d-cc3d01060986"
-			"376982f7-6fcd-4fc2-b47f-2f422eac684f" "37eb5dab-37c7-4482-a799-a1218e73bc79"
-			"38ec881e-30ac-417f-b56e-6d9afe68a5ed" "3a4d34a6-4160-449e-90d3-0bfbb00c3b4a"
-			"3a5b6c5d-b79f-4f0b-8919-25b240e328f3" "3c1a67d1-ffb0-4121-8fc1-50a0e0825841"
-			"3c38dc68-7f3b-4cb2-9305-03dac2baf512" "3c53b173-e3bf-4bcc-9b95-85eb90476496"
-			"3d1bfcb0-6c0b-4d85-bbb8-cfd17e2f2a85" "3de03115-b2f8-41bb-a9df-b9d2be78d9a1"
-			"3f77d215-555d-4585-bd3c-b1e93c92c585" "42a92b51-f47f-4d8f-b663-8ded0118adb3"
-			"42c0f83f-068a-45b9-b1cf-aacc8e2e4619" "42ed28d3-e4f6-4c4d-8e50-c5d12a916582"
-			"42effb84-1b10-4007-8105-6e2a71795a17" "434ffbb1-db57-45b1-93a7-fc8cb7dd4a13"
-			"43a3b86b-8110-4aab-9694-36fb9168ccd8" "43a4d29b-1fde-4678-9835-7437c9450406"
-			"43fafd29-8193-48be-a163-628865cdef91" "4497ffde-54f4-464b-9067-03d9ef1b3517"
-			"45e602eb-e965-4a3e-98fb-02ef1f150d34" "46b3625a-7215-4ebc-ab8e-7e2d4031e3db"
-			"474232c2-04d4-453d-b78e-f27f92d372f9" "4928fb89-7c04-42bf-b945-7bcaad181c28"
-			"493df916-65b7-4537-9d24-ff7d7c33a98d" "49f3cd91-7e35-4d4b-8941-e29f78a5f9d9"
-			"4a170e91-0273-4d96-80f4-c9d6714b2c7f" "4b798a4b-4293-4093-bc77-48f1c7e22f57"
-			"4d17693b-29c9-4006-9f70-2549470e23cd" "4d48904c-6984-4751-b670-a8f98eb17c47"
-			"4e3bbf3a-4a52-4e18-8c2f-1c553750609c" "4e41c8bc-cb1e-4b1b-9585-fae27360e9cc"
-			"50bd2c7b-25b4-46e8-b7fc-581e89784d67" "50cfd71d-cf51-4b5b-9169-de9b809a5f4b"
-			"510b6e98-09e5-40f9-bd1d-a4b61ed5777b" "52336d06-d857-4034-a265-4f243742cd3a"
-			"5464908b-d283-47bf-a207-8c7b9e007575" "54919214-6b57-4c10-b585-4a394986db28"
-			"569a30f5-181c-4d41-ac33-a55910b7fe48" "57b41acd-2659-4bbf-9cc0-335778aac27d"
-			"57ee3cf8-18ca-459d-b16a-b880fc896056" "58739658-449f-4c3a-b66b-121630964125"
-			"58c67e10-6811-47ae-aa5f-5a310ebce572" "5902eada-04c7-458c-9ed7-9218d004274c"
-			"5a7291c4-75ad-4daf-9829-37581971c580" "5abd3b76-14da-4feb-afc3-95fc7433b2f8"
-			"5dc159f6-349d-4a0b-a5dd-85527661396d" "5fb29ec2-b54b-4ab0-9fdb-422f36113ce4"
-			"6030056d-ef84-4b06-93d5-177c6afd467c" "603c8648-3766-43b0-9da4-65108683ae9a"
-			"607bdca5-acd3-4d52-8276-b9f2ba9e05dc" "6169e5b9-bf1b-4fdc-9b7f-601e7f73e59c"
-			"62f1c18f-00cb-4fb5-9e37-9ec0fde46cb1" "63124295-9617-450b-83a0-5ae266b5c76c"
-			"634acfe3-0ed9-4a98-a8ff-d73eb358a78b" "63a5d286-13c6-4582-b509-370bd4906cf9"
-			"6457cb3d-edb6-469c-bfc7-39a9a4963dd6" "6581d21d-ab15-44e9-9a24-3a80e7ccd512"
-			"65c0ca94-1751-4fb1-ab1c-6f0f449c004f" "65e36a44-2064-4618-b600-625c349dceb0"
-			"66f6bec6-f940-4379-a243-bbb7ac1281b4" "6700ece0-aafa-4d99-9860-fcbeaebd01c1"
-			"69de1f6a-392f-4d6c-a6c2-a70c58068fa7" "6a809700-0079-4087-811c-7354edfe6e18"
-			"6be7d2e1-857b-48c0-ab95-39caa26e1c46" "6c29a194-8665-4773-b4ba-71e456fecb9c"
-			"6d559d44-5ece-4565-b348-9e4dd38c0ea6" "6d6fc89b-a10a-4db5-9583-7464905ef16c"
-			"6e033011-f1e8-4aa4-beac-57688e11dec0" "6e746af5-d799-41c4-b6c6-4419157f3afb"
-			"6eff5254-72c1-4590-9503-4c124c6f39cd" "72c6443c-b7e9-4b32-bbb9-953b4a102f4f"
-			"72d778f2-dfae-4d10-bffe-7ce9f6a50ce2" "7398d43e-1da0-4ab7-a1a4-69c5a0002a3b"
-			"73b53835-4e3e-4b6b-8452-4a3f289023ef" "7612ab70-89c3-49be-8042-1996bb59256b"
-			"76791dab-80e4-49bd-855c-bbdafaa8ac62" "76c1051b-296a-4dde-a164-a36dcbc252b1"
-			"776ee880-bba2-4a72-85f3-d9675b2fbb7c" "78b4213c-a68c-4eeb-8534-cca2aab518cf"
-			"790cb674-4b8c-49b3-adee-247f61cb8d94" "79a8399f-a553-4f9c-9d49-bf8c2595b6d8"
-			"7a7f255d-cb60-4163-94f7-f133865ed82a" "7bb7018f-5ce1-43c2-a04b-85821e78a4c6"
-			"7cc14209-0024-4ee8-a7ac-a4371f106d7e" "7dfd8732-2a7a-42aa-af49-ee96b89926ee"
-			"7e37340b-402c-4a49-9024-1e69ad70b183" "7e4a5e30-d0b7-4603-be7c-7048e91a3d2a"
-			"801c8322-b586-4c61-b51e-9ab8a5717564" "808620eb-66f4-4db1-a03e-1c5e9f0f090e"
-			"8111477c-d451-4773-abe2-2d83487f28e7" "81e18af0-b9c9-412d-9fa1-3fba4fb62e0f"
-			"844527f0-b586-4c78-834d-b5384d357f2f" "84a92759-9e55-4ae6-bb51-bc315968f517"
-			"850ab611-67a6-4ccc-90e4-e8656972453b" "8541e30e-63b8-48fe-a4a7-7fedd0acd605"
-			"860afa29-7e70-4780-a5fa-3ec902c8e73d" "8692012b-360a-45ac-9772-3d7b87b3aaf9"
-			"86cb9f35-d19f-4432-bc04-77b23156c85c" "884ae3bc-99eb-4fdb-b3f2-64a63d4d0125"
-			"8ad4c049-d7a1-4b20-a5ae-78cb80fefa85" "8b48eef0-a6e6-415b-a2c5-60a6da24430a"
-			"8b5bdd53-97f7-4156-9944-12620d55f913" "8b922aea-c3dd-434c-b8bd-da64bdf56cc2"
-			"8bb29f77-3a2a-4087-85f2-082bcd4ef616" "8beca4db-ca36-47c2-919d-3e394e9e8791"
-			"8c195964-076f-462a-98b3-afc24dcc929c" "8ca2a8d7-b8ce-4ff0-8cdb-5cd6740618b5"
-			"8da05908-f3cf-457d-b3b9-3f63eb76c6c2" "8ec8e54e-7ab7-4462-8984-467470e2714c"
+			"1fc22832-e0a1-4f08-b517-5bd4675402dd" "200c63f4-71d8-40f8-9baa-b759e6ec6bba"
+			"2081fae0-9e2f-41ba-bb8e-0d8113bf390a" "2166ed2e-0dad-4c40-b7c1-87559fbc1e5e"
+			"21be83a7-99da-4d10-b057-d953cf2c1f81" "220d4f54-abdf-4800-9fab-ed23708941e4"
+			"2334dac1-24a8-407c-9ab4-5e67708d6020" "258c4816-45ff-4431-9120-72ed127013b5"
+			"264a8c3a-cb18-4ae9-9357-bdaa189bd561" "28174815-c6a8-457a-80d4-bcc432255b5c"
+			"2e4a645d-36c7-44a0-a9f1-1b322669188a" "2edd09a0-2ced-4388-8429-7e3a4530639b"
+			"2f636757-33b6-448b-bb2f-94afdd342ad4" "30cab685-24c7-4bd8-ac3d-cfc54f9f823f"
+			"32d8a9d0-41b0-4d00-900a-d5b6abb61b91" "34652a30-ac4b-4a89-a81a-929b1eeb1963"
+			"34a9e71a-6d62-4f50-b89d-581f181ec6eb" "3551439a-9f45-4796-a6ff-5526d872b812"
+			"355380b8-2783-4724-b79d-cc3d01060986" "376982f7-6fcd-4fc2-b47f-2f422eac684f"
+			"37eb5dab-37c7-4482-a799-a1218e73bc79" "38ec881e-30ac-417f-b56e-6d9afe68a5ed"
+			"3a4d34a6-4160-449e-90d3-0bfbb00c3b4a" "3a5b6c5d-b79f-4f0b-8919-25b240e328f3"
+			"3c1a67d1-ffb0-4121-8fc1-50a0e0825841" "3c38dc68-7f3b-4cb2-9305-03dac2baf512"
+			"3c53b173-e3bf-4bcc-9b95-85eb90476496" "3d1bfcb0-6c0b-4d85-bbb8-cfd17e2f2a85"
+			"3de03115-b2f8-41bb-a9df-b9d2be78d9a1" "3f77d215-555d-4585-bd3c-b1e93c92c585"
+			"42a92b51-f47f-4d8f-b663-8ded0118adb3" "42c0f83f-068a-45b9-b1cf-aacc8e2e4619"
+			"42ed28d3-e4f6-4c4d-8e50-c5d12a916582" "42effb84-1b10-4007-8105-6e2a71795a17"
+			"434ffbb1-db57-45b1-93a7-fc8cb7dd4a13" "43a3b86b-8110-4aab-9694-36fb9168ccd8"
+			"43a4d29b-1fde-4678-9835-7437c9450406" "43fafd29-8193-48be-a163-628865cdef91"
+			"4497ffde-54f4-464b-9067-03d9ef1b3517" "45e602eb-e965-4a3e-98fb-02ef1f150d34"
+			"46b3625a-7215-4ebc-ab8e-7e2d4031e3db" "474232c2-04d4-453d-b78e-f27f92d372f9"
+			"4928fb89-7c04-42bf-b945-7bcaad181c28" "493df916-65b7-4537-9d24-ff7d7c33a98d"
+			"49f3cd91-7e35-4d4b-8941-e29f78a5f9d9" "4a170e91-0273-4d96-80f4-c9d6714b2c7f"
+			"4b798a4b-4293-4093-bc77-48f1c7e22f57" "4d17693b-29c9-4006-9f70-2549470e23cd"
+			"4d48904c-6984-4751-b670-a8f98eb17c47" "4e3bbf3a-4a52-4e18-8c2f-1c553750609c"
+			"4e41c8bc-cb1e-4b1b-9585-fae27360e9cc" "50bd2c7b-25b4-46e8-b7fc-581e89784d67"
+			"50cfd71d-cf51-4b5b-9169-de9b809a5f4b" "510b6e98-09e5-40f9-bd1d-a4b61ed5777b"
+			"52336d06-d857-4034-a265-4f243742cd3a" "5464908b-d283-47bf-a207-8c7b9e007575"
+			"54919214-6b57-4c10-b585-4a394986db28" "569a30f5-181c-4d41-ac33-a55910b7fe48"
+			"57b41acd-2659-4bbf-9cc0-335778aac27d" "57ee3cf8-18ca-459d-b16a-b880fc896056"
+			"58739658-449f-4c3a-b66b-121630964125" "58c67e10-6811-47ae-aa5f-5a310ebce572"
+			"5902eada-04c7-458c-9ed7-9218d004274c" "5a7291c4-75ad-4daf-9829-37581971c580"
+			"5abd3b76-14da-4feb-afc3-95fc7433b2f8" "5dc159f6-349d-4a0b-a5dd-85527661396d"
+			"5fb29ec2-b54b-4ab0-9fdb-422f36113ce4" "6030056d-ef84-4b06-93d5-177c6afd467c"
+			"603c8648-3766-43b0-9da4-65108683ae9a" "607bdca5-acd3-4d52-8276-b9f2ba9e05dc"
+			"6169e5b9-bf1b-4fdc-9b7f-601e7f73e59c" "62f1c18f-00cb-4fb5-9e37-9ec0fde46cb1"
+			"63124295-9617-450b-83a0-5ae266b5c76c" "634acfe3-0ed9-4a98-a8ff-d73eb358a78b"
+			"63a5d286-13c6-4582-b509-370bd4906cf9" "6457cb3d-edb6-469c-bfc7-39a9a4963dd6"
+			"6581d21d-ab15-44e9-9a24-3a80e7ccd512" "65c0ca94-1751-4fb1-ab1c-6f0f449c004f"
+			"65e36a44-2064-4618-b600-625c349dceb0" "66f6bec6-f940-4379-a243-bbb7ac1281b4"
+			"6700ece0-aafa-4d99-9860-fcbeaebd01c1" "69de1f6a-392f-4d6c-a6c2-a70c58068fa7"
+			"6a809700-0079-4087-811c-7354edfe6e18" "6be7d2e1-857b-48c0-ab95-39caa26e1c46"
+			"6c29a194-8665-4773-b4ba-71e456fecb9c" "6d559d44-5ece-4565-b348-9e4dd38c0ea6"
+			"6d6fc89b-a10a-4db5-9583-7464905ef16c" "6e033011-f1e8-4aa4-beac-57688e11dec0"
+			"6e746af5-d799-41c4-b6c6-4419157f3afb" "6eff5254-72c1-4590-9503-4c124c6f39cd"
+			"72c6443c-b7e9-4b32-bbb9-953b4a102f4f" "72d778f2-dfae-4d10-bffe-7ce9f6a50ce2"
+			"7398d43e-1da0-4ab7-a1a4-69c5a0002a3b" "73b53835-4e3e-4b6b-8452-4a3f289023ef"
+			"7612ab70-89c3-49be-8042-1996bb59256b" "76791dab-80e4-49bd-855c-bbdafaa8ac62"
+			"76c1051b-296a-4dde-a164-a36dcbc252b1" "776ee880-bba2-4a72-85f3-d9675b2fbb7c"
+			"78b4213c-a68c-4eeb-8534-cca2aab518cf" "790cb674-4b8c-49b3-adee-247f61cb8d94"
+			"79a8399f-a553-4f9c-9d49-bf8c2595b6d8" "7a7f255d-cb60-4163-94f7-f133865ed82a"
+			"7bb7018f-5ce1-43c2-a04b-85821e78a4c6" "7cc14209-0024-4ee8-a7ac-a4371f106d7e"
+			"7dfd8732-2a7a-42aa-af49-ee96b89926ee" "7e37340b-402c-4a49-9024-1e69ad70b183"
+			"7e4a5e30-d0b7-4603-be7c-7048e91a3d2a" "801c8322-b586-4c61-b51e-9ab8a5717564"
+			"808620eb-66f4-4db1-a03e-1c5e9f0f090e" "8111477c-d451-4773-abe2-2d83487f28e7"
+			"81e18af0-b9c9-412d-9fa1-3fba4fb62e0f" "844527f0-b586-4c78-834d-b5384d357f2f"
+			"84a92759-9e55-4ae6-bb51-bc315968f517" "850ab611-67a6-4ccc-90e4-e8656972453b"
+			"8541e30e-63b8-48fe-a4a7-7fedd0acd605" "860afa29-7e70-4780-a5fa-3ec902c8e73d"
+			"8692012b-360a-45ac-9772-3d7b87b3aaf9" "86cb9f35-d19f-4432-bc04-77b23156c85c"
+			"884ae3bc-99eb-4fdb-b3f2-64a63d4d0125" "8ad4c049-d7a1-4b20-a5ae-78cb80fefa85"
+			"8b48eef0-a6e6-415b-a2c5-60a6da24430a" "8b5bdd53-97f7-4156-9944-12620d55f913"
+			"8b922aea-c3dd-434c-b8bd-da64bdf56cc2" "8bb29f77-3a2a-4087-85f2-082bcd4ef616"
+			"8beca4db-ca36-47c2-919d-3e394e9e8791" "8c195964-076f-462a-98b3-afc24dcc929c"
+			"8ca2a8d7-b8ce-4ff0-8cdb-5cd6740618b5" "8da05908-f3cf-457d-b3b9-3f63eb76c6c2"
+			"8dd3f9a4-695e-4de5-a9c7-6a1165b84c7b" "8ec8e54e-7ab7-4462-8984-467470e2714c"
 			"8f2e8881-4363-457f-bf77-0cd15b0f6d5a" "8fc2ab49-6c4e-439e-ab8c-99c366ce1dca"
 			"8fc40a0c-8394-410e-9504-8e91a4a54b78" "906a804b-ca54-4e5e-8bc1-f8953ba0ad8b"
 			"90b50b93-2b79-4b3a-a89d-1bce6500f2d4" "91388e9a-0365-4446-8ce0-9d5badfb3eda"
@@ -55678,50 +55112,50 @@
 			"b6902215-764b-4bee-8167-f968cfdc58b2" "b6f763e4-09fc-4b94-96f1-ead72677c198"
 			"b831bfbb-eeb6-48a4-86db-dffad8bc5c4f" "ba5254b3-c839-4f26-8ed4-fbf5f3cc9fa0"
 			"ba93453b-d2af-4b95-92d8-97b5c56c5422" "bb09cad0-a5d0-4b4a-b063-e7c62c9b7dc7"
-			"bc205bd7-cabb-4bbe-9bc8-20da9a8c18f5" "bc7b1e42-a4a8-449d-862d-480a153bf692"
-			"bd03a72c-942a-421d-bc28-edb764f903e2" "bd1e578b-a292-4fb0-93b4-e84611cceef3"
-			"be0958de-0355-4cb0-bc2b-5a08f84799ad" "befea419-501f-4542-adb3-5c35865eda85"
-			"bf95ee43-9a3c-4199-8eb1-1c4bf1a190ef" "bfc33485-5223-4565-b869-7a10f35a518d"
-			"bfd0a9bb-e230-4275-9396-628fdf87f63c" "c02fb15a-49e0-49d1-bd57-09fdaf11cf82"
-			"c070447a-0e3d-4a58-a933-031d4f106381" "c1b66f08-822b-49f9-b596-a3a2042efb56"
-			"c26c183c-0e65-41c2-90e2-4d9ceeae86f0" "c291ee6a-e92d-4a48-8057-7a7c5e8cfe03"
-			"c2dadf95-a8df-4844-8879-a21c6bbb8c29" "c3575c80-305d-49c4-a879-2880ab624df7"
-			"c40746b7-405c-4ed8-b62a-bbe4139e159e" "c5dcf183-1191-4cab-ba26-ea8483cebaf1"
-			"c6e23b48-d450-4317-8534-696beef41fa5" "c85c528b-77fb-44ff-ab5a-529e990fec11"
-			"c896179b-ee43-4e01-9866-cdf745108d2a" "ca978483-4e2f-41ef-b886-3ae73170e90f"
-			"cb30f63f-ecda-4f76-ba9e-3ecfb7f561ba" "cbeadf28-2f83-480e-8ace-a78d7945c9fa"
-			"cc89c282-39a2-4837-9849-22f4fcd5be4c" "cd8d0c88-b3b8-43b0-a96c-08c2cd66880f"
-			"cda6e071-3b59-403e-9979-508e0d8c461e" "cdfbb629-99b9-4b74-a9f9-71c38f97ce91"
-			"cf1e32b2-d2e7-4c2f-9437-96df7cd52c34" "cf9cba9c-8bda-430b-a49e-36745861a613"
-			"d0dce646-150e-41c4-9ce2-9addf6940c99" "d2af3d15-0f25-4e4e-a77b-6ddb39fe7661"
-			"d7461a44-55da-4100-8dcb-7c14a57193af" "d89e6729-6251-4de8-a44f-9291a36fd934"
-			"d9241751-32b7-4bd5-8c64-a1bc7f35f29c" "d9d9f62b-fc6a-4b3f-aae9-29165a4a93cc"
-			"da445c20-9b4d-4b24-97cf-27d38d805999" "da45ca64-15dc-4799-8e74-195a9ac9d56f"
-			"dab8ad57-3b37-46e2-aee0-1ecd3a649a58" "dae4572b-313b-4b03-8b94-86eee9278c6c"
-			"dcbfe29e-feeb-479f-870f-12df09c770a5" "dd026bb2-4b57-423f-9712-643b8c6c3a10"
-			"dd0fdcaf-56ed-460c-beac-ca6cbfc74af7" "dd425dc0-ffae-480d-92c0-6aba1006187f"
-			"de116067-9f93-4340-a7dc-1e51083f4087" "de5e152e-1e4c-40ae-94f9-640388662f4d"
-			"deb955b2-50b9-4720-9e37-6a416e96081c" "e1915aea-529f-4811-9a6f-2c9a4d000b8d"
-			"e3860940-d5b9-4c39-b9ae-17e189ea3d0a" "e3e61005-cad5-4763-a66a-e6d7d091ac2b"
-			"e44df86a-4fba-4401-8501-1e2e9b1db499" "e7cb81b6-761a-4d6f-9d3c-7201e74d80e9"
-			"e992e68a-e0d3-437a-91c6-7d0d205dd698" "ea0be8c3-7fd0-4878-a0ff-1175fc52543d"
-			"ea0de029-d44a-4d2a-b2e3-f7e4277f93d5" "ea719195-86e6-4f9c-87f7-476ddffdfbef"
-			"eb732122-ae95-4cb4-abb9-72245b5c659b" "ebdafcfb-0531-4b00-a68b-e4fdc32a18d3"
-			"eca44513-1466-4ce9-87c5-bc5ca2bf2732" "ecc6d714-b1be-429c-a0e3-18f3043b51f3"
-			"edf30019-6383-4fe0-85ec-ed2fc787af1e" "ee946a22-f3a3-48e7-a41a-f2a653b5275d"
-			"eff810f7-de4c-4df6-a353-185967f81ce3" "f110321d-ad41-4322-92ce-c32c67148662"
-			"f15bfe23-e36d-4d46-a8e2-35731c4719ae" "f1e98b72-6b3c-498e-843a-54d3fc7452e1"
-			"f56681df-e3e9-4a4b-8e8c-f96c44e9a79b" "f62b3cc5-1446-4113-bb96-149f00e3602a"
-			"f6579687-e414-402d-8504-b5897dbece1f" "f6746e14-e9ca-4e5f-a48d-523da29da4a3"
-			"f71fb35d-7194-4875-a2c4-79ae62257642" "f7b1665a-f9e6-48ea-b813-dc2fca8b88d0"
-			"f85d4236-f75e-4cfc-9dd2-348bcb51c0ed" "f8b22cda-2286-4617-9b75-91e4f94b1119"
-			"f8be8147-5b00-4cfe-9a45-4ddc22155e61" "f8e6e3c5-d783-4f7e-9568-47a2863d5b1c"
-			"f95a7566-1398-455f-a1af-63232e777094" "f967ee71-28cf-4a6d-8df8-c45668c34017"
-			"fa3d150b-985e-4750-9d15-0f4d34ec9da9" "fa53583f-55bc-40bc-a251-ddef185bf0c1"
-			"fa7eade3-ed74-43e8-84fd-476ddfa22918" "fb4ed2d0-4230-4dd9-bd04-a5c3d8d62c9f"
-			"fba802ca-2372-4c96-8107-c5047362cf65" "fc2eff48-19f7-4126-9eba-8b742f2a3292"
-			"fc431cbe-5885-4b24-b28a-891bf5c6cbc6" "fd1f28ca-1ff7-4239-bfbc-82a20cd33411"
-			"fd2c50e3-d3b4-4258-9276-d03617c72acd"
+			"bbcb9f77-3dd5-43ec-b991-cab819cc5a5d" "bc205bd7-cabb-4bbe-9bc8-20da9a8c18f5"
+			"bc7b1e42-a4a8-449d-862d-480a153bf692" "bd03a72c-942a-421d-bc28-edb764f903e2"
+			"bd1e578b-a292-4fb0-93b4-e84611cceef3" "be0958de-0355-4cb0-bc2b-5a08f84799ad"
+			"befea419-501f-4542-adb3-5c35865eda85" "bf95ee43-9a3c-4199-8eb1-1c4bf1a190ef"
+			"bfc33485-5223-4565-b869-7a10f35a518d" "bfd0a9bb-e230-4275-9396-628fdf87f63c"
+			"c02fb15a-49e0-49d1-bd57-09fdaf11cf82" "c070447a-0e3d-4a58-a933-031d4f106381"
+			"c1b66f08-822b-49f9-b596-a3a2042efb56" "c26c183c-0e65-41c2-90e2-4d9ceeae86f0"
+			"c291ee6a-e92d-4a48-8057-7a7c5e8cfe03" "c2dadf95-a8df-4844-8879-a21c6bbb8c29"
+			"c3575c80-305d-49c4-a879-2880ab624df7" "c40746b7-405c-4ed8-b62a-bbe4139e159e"
+			"c5dcf183-1191-4cab-ba26-ea8483cebaf1" "c6e23b48-d450-4317-8534-696beef41fa5"
+			"c85c528b-77fb-44ff-ab5a-529e990fec11" "c896179b-ee43-4e01-9866-cdf745108d2a"
+			"ca978483-4e2f-41ef-b886-3ae73170e90f" "cb30f63f-ecda-4f76-ba9e-3ecfb7f561ba"
+			"cbeadf28-2f83-480e-8ace-a78d7945c9fa" "cc89c282-39a2-4837-9849-22f4fcd5be4c"
+			"cd8d0c88-b3b8-43b0-a96c-08c2cd66880f" "cda6e071-3b59-403e-9979-508e0d8c461e"
+			"cdfbb629-99b9-4b74-a9f9-71c38f97ce91" "cf1e32b2-d2e7-4c2f-9437-96df7cd52c34"
+			"cf9cba9c-8bda-430b-a49e-36745861a613" "d0dce646-150e-41c4-9ce2-9addf6940c99"
+			"d2af3d15-0f25-4e4e-a77b-6ddb39fe7661" "d7461a44-55da-4100-8dcb-7c14a57193af"
+			"d89e6729-6251-4de8-a44f-9291a36fd934" "d9241751-32b7-4bd5-8c64-a1bc7f35f29c"
+			"d9d9f62b-fc6a-4b3f-aae9-29165a4a93cc" "da445c20-9b4d-4b24-97cf-27d38d805999"
+			"da45ca64-15dc-4799-8e74-195a9ac9d56f" "dab8ad57-3b37-46e2-aee0-1ecd3a649a58"
+			"dae4572b-313b-4b03-8b94-86eee9278c6c" "dcbfe29e-feeb-479f-870f-12df09c770a5"
+			"dd026bb2-4b57-423f-9712-643b8c6c3a10" "dd0fdcaf-56ed-460c-beac-ca6cbfc74af7"
+			"dd425dc0-ffae-480d-92c0-6aba1006187f" "de116067-9f93-4340-a7dc-1e51083f4087"
+			"de5e152e-1e4c-40ae-94f9-640388662f4d" "deb955b2-50b9-4720-9e37-6a416e96081c"
+			"e1915aea-529f-4811-9a6f-2c9a4d000b8d" "e3860940-d5b9-4c39-b9ae-17e189ea3d0a"
+			"e3e61005-cad5-4763-a66a-e6d7d091ac2b" "e44df86a-4fba-4401-8501-1e2e9b1db499"
+			"e7cb81b6-761a-4d6f-9d3c-7201e74d80e9" "e992e68a-e0d3-437a-91c6-7d0d205dd698"
+			"ea0be8c3-7fd0-4878-a0ff-1175fc52543d" "ea0de029-d44a-4d2a-b2e3-f7e4277f93d5"
+			"ea719195-86e6-4f9c-87f7-476ddffdfbef" "eb732122-ae95-4cb4-abb9-72245b5c659b"
+			"ebdafcfb-0531-4b00-a68b-e4fdc32a18d3" "eca44513-1466-4ce9-87c5-bc5ca2bf2732"
+			"ecc6d714-b1be-429c-a0e3-18f3043b51f3" "edf30019-6383-4fe0-85ec-ed2fc787af1e"
+			"ee946a22-f3a3-48e7-a41a-f2a653b5275d" "eff810f7-de4c-4df6-a353-185967f81ce3"
+			"f110321d-ad41-4322-92ce-c32c67148662" "f15bfe23-e36d-4d46-a8e2-35731c4719ae"
+			"f1e98b72-6b3c-498e-843a-54d3fc7452e1" "f56681df-e3e9-4a4b-8e8c-f96c44e9a79b"
+			"f62b3cc5-1446-4113-bb96-149f00e3602a" "f6579687-e414-402d-8504-b5897dbece1f"
+			"f6746e14-e9ca-4e5f-a48d-523da29da4a3" "f71fb35d-7194-4875-a2c4-79ae62257642"
+			"f7b1665a-f9e6-48ea-b813-dc2fca8b88d0" "f85d4236-f75e-4cfc-9dd2-348bcb51c0ed"
+			"f8b22cda-2286-4617-9b75-91e4f94b1119" "f8be8147-5b00-4cfe-9a45-4ddc22155e61"
+			"f8e6e3c5-d783-4f7e-9568-47a2863d5b1c" "f95a7566-1398-455f-a1af-63232e777094"
+			"f967ee71-28cf-4a6d-8df8-c45668c34017" "fa3d150b-985e-4750-9d15-0f4d34ec9da9"
+			"fa53583f-55bc-40bc-a251-ddef185bf0c1" "fa7eade3-ed74-43e8-84fd-476ddfa22918"
+			"fb4ed2d0-4230-4dd9-bd04-a5c3d8d62c9f" "fba802ca-2372-4c96-8107-c5047362cf65"
+			"fc2eff48-19f7-4126-9eba-8b742f2a3292" "fc431cbe-5885-4b24-b28a-891bf5c6cbc6"
+			"fd1f28ca-1ff7-4239-bfbc-82a20cd33411" "fd2c50e3-d3b4-4258-9276-d03617c72acd"
 		)
 	)
 	(sheet_instances

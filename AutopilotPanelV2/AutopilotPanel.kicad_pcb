@@ -4797,7 +4797,7 @@
 		(at 226.45 68.8)
 		(descr "LED SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing)")
 		(tags "LED handsolder")
-		(property "Reference" "D17 3.3V"
+		(property "Reference" "D17"
 			(at 0 1.8 0)
 			(layer "F.SilkS")
 			(uuid "ac2638fe-4168-4bca-83f3-ad9af4dab08c")
@@ -10993,7 +10993,7 @@
 		(at 235.05 110.3)
 		(descr "LED SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing)")
 		(tags "LED handsolder")
-		(property "Reference" "D16 5V"
+		(property "Reference" "D16"
 			(at 2.7 -1.25 90)
 			(layer "F.SilkS")
 			(uuid "70f3f715-7644-43ce-bb09-23de345275a0")
@@ -38877,7 +38877,7 @@
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(net "/QSPI_SD3")
 			(pinfunction "QSPI_SD3_55")
-			(pintype "bidirectional")
+			(pintype "bidirectional+no_connect")
 			(uuid "1437fe10-2074-4916-ae9c-8364cdf31043")
 		)
 		(pad "56" smd rect
@@ -38886,7 +38886,7 @@
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(net "/QSPI_SCLK")
 			(pinfunction "QSPI_SCLK_56")
-			(pintype "bidirectional")
+			(pintype "bidirectional+no_connect")
 			(uuid "3411c220-7e6c-41fd-a017-8dbff7ed96a1")
 		)
 		(pad "57" smd rect
@@ -38895,7 +38895,7 @@
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(net "/QSPI_SD0")
 			(pinfunction "QSPI_SD0_57")
-			(pintype "bidirectional")
+			(pintype "bidirectional+no_connect")
 			(uuid "e184d445-81bd-4c4f-ad2b-2f921eecd47a")
 		)
 		(pad "58" smd rect
@@ -38904,7 +38904,7 @@
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(net "/QSPI_SD2")
 			(pinfunction "QSPI_SD2_58")
-			(pintype "bidirectional")
+			(pintype "bidirectional+no_connect")
 			(uuid "b63c2185-0b35-4f09-9833-ab578669a979")
 		)
 		(pad "59" smd rect
@@ -38913,7 +38913,7 @@
 			(layers "F.Cu" "F.Mask" "F.Paste")
 			(net "/QSPI_SD1")
 			(pinfunction "QSPI_SD1_59")
-			(pintype "bidirectional")
+			(pintype "bidirectional+no_connect")
 			(uuid "cde11068-378f-4802-b6b8-85b00f60eec3")
 		)
 		(pad "60" smd rect

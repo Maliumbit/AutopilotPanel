@@ -133,7 +133,7 @@
 		(descr "Through hole straight pin header, 1x02, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x02 2.54mm single row")
 		(property "Reference" "J9"
-			(at 2.35 1.225 90)
+			(at -2.2 1.875 90)
 			(layer "F.SilkS")
 			(uuid "a71ef693-9f92-45e3-acf0-6a228bd6a48a")
 			(effects
@@ -16692,7 +16692,7 @@
 		(descr "https://ia800903.us.archive.org/24/items/CTKD1x8K/Cromatek%20D168K.pdf")
 		(tags "Single digit 7 segment ultra bright red")
 		(property "Reference" "U13"
-			(at -3.25 0.76 180)
+			(at -2.8 7.91 180)
 			(layer "F.SilkS")
 			(uuid "ad74be38-427d-4c93-a439-c1b8637c3957")
 			(effects
@@ -22145,7 +22145,7 @@
 		(descr "Resistor SMD 0603 (1608 Metric), square (rectangular) end terminal, IPC-7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf)")
 		(tags "resistor")
 		(property "Reference" "R68"
-			(at 0 -1.43 0)
+			(at 0 1.4 0)
 			(layer "F.SilkS")
 			(uuid "60cd479c-283a-4bec-85c2-537fe65e5d7a")
 			(effects
@@ -26755,7 +26755,7 @@
 		(descr "Through hole straight pin header, 1x02, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x02 2.54mm single row")
 		(property "Reference" "J4"
-			(at 0 -2.38 0)
+			(at 2.3 1.075 90)
 			(layer "F.SilkS")
 			(uuid "2e4f286a-4fb9-4596-8939-36372f359d8b")
 			(effects
@@ -31028,7 +31028,7 @@
 		(descr "TSSOP, 16 Pin (https://www.jedec.org/document_search?search_api_views_fulltext=MO-153)")
 		(tags "TSSOP SO JEDEC-MO-153-AB Texas_PW0016A Microchip-ST Toshiba-TSSOP16-P-0044-0.65A NXP-SOT403-1 Infineon-P-TSSOP-16-800")
 		(property "Reference" "U12"
-			(at 0 -3.45 0)
+			(at 0 3.8 0)
 			(layer "F.SilkS")
 			(uuid "f8247f6a-c3c1-4222-a8c7-c25f85ab5889")
 			(effects
@@ -41463,7 +41463,7 @@
 		(descr "https://ia800903.us.archive.org/24/items/CTKD1x8K/Cromatek%20D168K.pdf")
 		(tags "Single digit 7 segment ultra bright red")
 		(property "Reference" "U18"
-			(at -3.1 -0.15 180)
+			(at -2.9 3.15 180)
 			(layer "F.SilkS")
 			(uuid "c857fb8a-fcd6-405f-9a45-46724f8f0db6")
 			(effects
@@ -47454,7 +47454,7 @@
 		(descr "Through hole straight pin header, 1x02, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x02 2.54mm single row")
 		(property "Reference" "J8"
-			(at 0 -2.38 90)
+			(at 0.6 -2.125 90)
 			(layer "F.SilkS")
 			(uuid "4f7b82fe-6e07-4ca2-9b39-1aeeb0051e52")
 			(effects
@@ -49111,7 +49111,7 @@
 		(descr "SOT, 3 Pin (JEDEC TO-236 Var AB https://www.jedec.org/document_search?search_api_views_fulltext=TO-236)")
 		(tags "SOT TO_SOT_SMD")
 		(property "Reference" "Q5"
-			(at 0.1875 2.82 90)
+			(at 1.7375 1.442 180)
 			(layer "F.SilkS")
 			(uuid "1fabe055-78cf-4f48-a9aa-993799c917c9")
 			(effects
@@ -49677,6 +49677,248 @@
 		)
 		(layer "Edge.Cuts")
 		(uuid "c28aaaba-08f7-42b1-8ba0-56abcb06794c")
+	)
+	(gr_text "CLK 7 segment"
+		(at 214.4 62.5 -45)
+		(layer "F.SilkS")
+		(uuid "72e77e9b-56dc-420b-8ff2-5e037bee4fbc")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.1)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "Q1 FET Gate"
+		(at 126.2 73.4 0)
+		(layer "F.SilkS")
+		(uuid "8f96ece2-2fe0-4223-9ee4-d09ad59fc026")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "GND"
+		(at 128.4 80 0)
+		(layer "F.SilkS")
+		(uuid "13d78ca4-ee2c-46e5-8d68-46018fc3a6da")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "PL In Buttons"
+		(at 175.6 119 0)
+		(layer "F.SilkS")
+		(uuid "700f794f-4679-4588-bcb5-22f78438d6d4")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "GND"
+		(at 189.4 117.6 0)
+		(layer "F.SilkS")
+		(uuid "250a251b-4b16-4ce8-bd88-4cfc17a4c33d")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "Out Q7 Taster"
+		(at 190.7 78.9 0)
+		(layer "F.SilkS")
+		(uuid "3bd4d06b-f0d4-4523-a29b-a47c59a01592")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "GND"
+		(at 196.1 73.9 0)
+		(layer "F.SilkS")
+		(uuid "f52bbd5d-c88d-4482-8c29-1b0a2ae2d7fa")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "CLK Button LEDs"
+		(at 198.5 116.1 0)
+		(layer "F.SilkS")
+		(uuid "726b38b6-ebd7-4671-af1f-85aeba4bf385")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "GND"
+		(at 203.2 119.8 0)
+		(layer "F.SilkS")
+		(uuid "ebe46b48-2a46-4dcd-a95e-da92e4089fa4")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "GND"
+		(at 210.3 86.6 0)
+		(layer "F.SilkS")
+		(uuid "230e20b7-460c-40ac-9b4e-017f25ee0ab6")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "3.3V"
+		(at 210.9 131.8 0)
+		(layer "F.SilkS")
+		(uuid "bbd6b143-0908-4799-90fc-4450da5ace1b")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "GND"
+		(at 212.2 65.3 0)
+		(layer "F.SilkS")
+		(uuid "3f2b96de-d255-4638-8540-753543258c6a")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "GND"
+		(at 212.6 98.9 0)
+		(layer "F.SilkS")
+		(uuid "e1589c18-c7cd-4262-9260-f015454b595b")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "GND"
+		(at 213.5 72.9 0)
+		(layer "F.SilkS")
+		(uuid "9bc1a2a3-0e08-4874-ae29-361e366b992e")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "GND"
+		(at 214.4 131.8 0)
+		(layer "F.SilkS")
+		(uuid "0e923475-57af-406e-adec-081d8420c226")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "GND"
+		(at 222 131.6 0)
+		(layer "F.SilkS")
+		(uuid "01f82815-d095-4739-902f-9c2fbe420f1b")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "5V"
+		(at 226.2 131.6 0)
+		(layer "F.SilkS")
+		(uuid "62f7f6c5-5d8f-4b64-be40-95bf6f04b5ad")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "CLK Schalter"
+		(at 208.1 77.6 0)
+		(layer "F.SilkS")
+		(uuid "da5285c8-c9b8-4682-8119-7399e992baa7")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.1)
+				(bold yes)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "Ser In Button LEDs"
+		(at 209.9 94.9 90)
+		(layer "F.SilkS")
+		(uuid "65dd6d48-2b1f-4639-a069-dbeac3c0bd2d")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
+	)
+	(gr_text "Ser In 7 Seg"
+		(at 216.5 105.8 90)
+		(layer "F.SilkS")
+		(uuid "c8111ccb-9a9f-47dc-8379-772e126288d4")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.1)
+			)
+			(justify left bottom)
+		)
 	)
 	(segment
 		(start 152.555625 128.8)
